@@ -1,1 +1,3 @@
-print("welcome to sumati balvan uncle")
+x = 5
+y = 10
+print(x + y) #Addition
