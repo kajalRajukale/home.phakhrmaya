@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -8,9 +7,8 @@ body {
 
 .header-container {
     text-align: center;
-    padding: 30px;
-    background: linear-gradient(135deg,#00662e,#3be12c,#00662e);
-    /* background: linear-gradient(135deg,rgb(255, 183, 0),#3be12c,#00662e); */
+    padding: 10px;
+    background: linear-gradient(135deg, #00662e, #3be12c, #15a4a4);
     color: white;
     position: relative;
     overflow: hidden;
@@ -44,7 +42,7 @@ body {
 }
 
 .logo {
-    width: 80px; /* Adjust the size of the logo */
+    width: 80px;
     height: auto;
 }
 
@@ -57,14 +55,14 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-.text-gradient {
+/* .text-gradient {
     display: block;
-    background: linear-gradient(45deg,#101d66,#3878c7);
+    background: linear-gradient(45deg, #04115d, #38b1c7);
     -webkit-background-clip: text;
     color: transparent;
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
-}
+} */
 
 .navbar {
     margin-top: 10px;
@@ -86,7 +84,7 @@ body {
 .navbar ul li a {
     text-decoration: none;
     font-size: 1.2em;
-    color:#101d66;
+    color: #101d66;
     padding: 10px 20px;
     transition: color 0.3s ease;
 }
@@ -111,106 +109,70 @@ body {
     left: 0;
 }
 
-
-@keyframes float {
+/* @keyframes float {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-20px);
     }
-}
+} */
 
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
-
-
-
-
-
 
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px;
+    gap: 30px;
+    height: 90vh;
+    /* Set the container height to 90% of the viewport height */
 }
 
-.slideshow-container {
-    display: flex;
-    width: 100%;
-    gap: 20px;
-}
-
-.slideshow {
+.marquee-container {
     position: relative;
     width: 50%;
-    height: 500px;
+    height: 70%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #d63f7b, #d1cf6e, #62b262, #5d8acd);
+    padding: 10px;
+    animation: gradientBorder 5s ease infinite;
 }
 
-.slideshow img {
-    width: 100%;
-    height: 100%;
+.overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slideshow img.active {
-    opacity: 1;
-}
-
-/* .overlay {
-    position: absolute;
-    top: 20px;
+    bottom: 20px;
+    /* Position the text at the top */
     left: 20px;
     color: white;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 5px;
     width: calc(100% - 40px);
     box-sizing: border-box;
-} */
-
-.slideshow-border {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    padding: 10px; /* Adjust the padding to control border thickness */
-    background: linear-gradient(45deg, #ff0066, #ffcc00, #66ff66, #0066ff);
-    background-size: 400% 400%;
-    border-radius: 20px;
-    animation: gradientBorder 5s ease infinite;
-}
-@keyframes gradientBorder {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    z-index: 2;
 }
 
 .read-more {
-    display: inline-block;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    /* Position the button at the bottom */
+    right: 20px;
+    /* Position the button to the right */
     text-decoration: none;
     color: #fff;
     background: #007bff;
@@ -222,3 +184,234 @@ body {
 .read-more:hover {
     background: #020641;
 }
+
+.marquee {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    /* Set the marquee height to 100% of its parent */
+    animation: marquee 10s linear infinite;
+}
+
+.marquee img {
+    width: 100%;
+    height: 100%;
+    /* Set the image height to 100% to fill the container */
+    border-radius: 10px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.main-header {
+    width: 100%;
+}
+
+.header-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.styled-text {
+    color: #261297;
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #888888;
+
+}
+  
+.container {
+    text-align: center;
+}
+.animated-text {
+    font-size: 40px;
+    margin: 20px;
+}
+
+/* Bounce Animation */
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Fade In and Out Animation */
+.fade {
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Typewriter Animation */
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    animation: typing 3s steps(14) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+  
+
+
+
+
+
+
+
+
+/* add cscs */
+
+
+/* Base styles for mobile-first approach */
+body {
+    font-size: 16px;
+    /* Base font size */
+}
+
+.header-container {
+    padding: 10px;
+}
+
+.logo-heading {
+    flex-direction: column;
+    /* Stack logo and heading vertically on smaller screens */
+}
+
+.dynamic-heading {
+    font-size: 1.5em;
+    /* Smaller font size on mobile */
+}
+
+/* .navbar ul {
+    flex-direction: column;
+    Stack navbar items vertically on smaller screens
+    gap: 10px;
+}
+
+.navbar ul li a {
+    font-size: 1em;
+    padding: 8px 16px;
+} */
+
+.container {
+    flex-direction: column;
+    /* Stack marquee containers vertically on smaller screens */
+    gap: 20px;
+}
+
+.marquee-container {
+    width: 100%;
+    height: 50vh;
+    /* Adjust height to be responsive */
+}
+
+.marquee img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Media Queries for Larger Screens */
+@media(min-width: 768px) {
+    .header-container {
+        padding: 20px;
+    }
+
+    .logo-heading {
+        flex-direction: row;
+        /* Align logo and heading horizontally on larger screens */
+    }
+
+    .dynamic-heading {
+        font-size: 2em;
+    }
+
+    /* .navbar ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    } */
+
+    .container {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .marquee-container {
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+@media(min-width: 1200px) {
+    .header-container {
+        padding: 30px;
+    }
+
+    .dynamic-heading {
+        font-size: 2.5em;
+    }
+
+    /* .navbar ul {
+        gap: 40px;
+    } */
+
+    /* .navbar ul li a {
+        font-size: 1.4em;
+    } */
+
+    .container {
+        gap: 40px;
+    }
+
+    .marquee-container {
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+/* add story style */

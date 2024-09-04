@@ -6,161 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
     <style>
-        /* .div-nav-bar {
-    width: 100%;
-}
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9; /* Light background for better readability */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-.child-nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: black;
-    padding: 10px;
-}
+        .main-founder {
+            background: linear-gradient(135deg, #ff6f61, #d33e3e); /* Bold gradient background */
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-a {
-    color: #fff;
-    list-style: none;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: bold;
-}
+        .child-founder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-a:hover {
-    background-color: rgb(9, 235, 58);
-    padding: 10px;
-    border-radius: 2px;
-}
+        .one-section, .two-section {
+            width: 100%;
+            max-width: 500px;
+        }
 
-.donate-btn {
-    background: orange;
-    border-radius: 20px;
-    padding: 10px;
-    cursor: pointer;
-} */
+        /* Headings */
+        .donate-h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-.donate-btn:hover a {
-    background: rgb(9, 235, 58);
-    border-radius: 20px;
-    padding: 10px;
-    cursor: pointer;
-}
-/* new-css */
+        h4 {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+            color: #ffe5e5;
+        }
 
-.main-founder {
-    width: 100%;
-    background: yellowgreen;
-}
+        .donate-para {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+            text-align: left;
+            padding: 0 20px;
+        }
 
-.child-founder {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
+        b {
+            color: #ffd700; /* Gold color for emphasis */
+        }
 
-.one-section {
-    width: 50%;
-}
+        /* Button Styling */
+        .read-more {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
 
-.two-section {
-    width: 50%;
-}
+        .read-more:hover {
+            background: #0056b3;
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
 
-.div-img-donate {
-    margin-left: 129px;
-}
+        .div-img-donate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-.donat-img {
-    height: 500px;
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
+        .donat-img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
 
-.donate-h1 {
-    text-align: center;
-    color: #fff;
-    font-weight: 900;
-    font-size: 60px;
-    /* margin-top: -33px; */
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
+        /* Responsive Design */
+        @media(min-width: 768px) {
+            .child-founder {
+                flex-direction: row;
+            }
 
-.donate-para {
-    margin-left: 38px;
-}
-
-.color-p {
-    font-size: 24px;
-    color: aliceblue;
-}
-
-.color-sp {
-    color: yellow;
-}
-
-b {
-    font-size: 24px;
-    color: aliceblue;
-}
-
-.big-para {
-    color: #fff;
-    font-size: 19px;
-    line-height: 34px;
-}
-
-.donte-b {
-    font-weight: bold;
-}
-
-.div-donate-btn {
-    margin-left: 35px;
-    margin-bottom: 30px;
-}
-
-.donate-now {
-    color: #fff;
-    background: yellowgreen;
-    border: 2px solid #fff;
-    padding: 10px;
-    width: 126px;
-    font-size: 17px;
-    border-radius: 2px;
-}
+            .one-section, .two-section {
+                max-width: 450px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    
     <div class="main-founder">
         <div class="child-founder">
+            <!-- Section One: Text Content -->
             <div class="one-section">
-                <h1 class="donate-h1">Donate For Child <br>Education</h1>
+                <h1 class="donate-h1">Empower a Child’s Future</h1>
+                <h4>Donate Today and Be the Change!</h4>
                 <div class="donate-para">
-                    <p class="color-p">We are advocates of<span class="color-sp"> child education, rural development,
-                            women<br> empowerment <b>and</b>
-                            better rural health and infrastructure.</span></p>
-                </div>
-                <hr>
-                <div class="donate-para">
-                    <p class="big-para">You can take a step forward and <b class="donte-b"><u>donate for child
-                                education</u></b> and support underprivileged children in India. Loksadhana is a
-                        charitable trust very close to Mumbai and Pune. Providing education to about 450+ students
-                        in our primary, secondary schools and junior college we are one of the unique charitable
-                        organisations in India.</p>
+                    Your support can change the future of a child. At Radhabai Hardikar Pranijat Mangel Sanstha, we believe that every child deserves the opportunity to learn, grow, and thrive.
+                    Every contribution, big or small, makes a lasting impact. Together, we can uplift lives and break the cycle of poverty through education.
+                    <br><br>
+                    <b>How Your Donation Helps:</b><br>
+                    - Sponsor a child's education<br>
+                    - Provide essential school supplies<br>
+                    - Support extracurricular activities and personal development<br>
+                    - Ensure access to nutritious meals and healthcare<br>
                 </div>
                 <div class="div-donate-btn">
-                    <a href="donateNow.html">
-                        <button class="donate-now">DonateNow</button>
-                        </a>
-                    </div>
+                    <a href="donateNow.html" class="read-more">Donate Now</a>
+                </div>
             </div>
+
+            <!-- Section Two: Image -->
             <div class="two-section">
                 <div class="div-img-donate">
-                    <img class="donat-img"
-                        src="https://loksadhana.org/wp-content/uploads/Donate-For-Child-Education.png">
+                    <img class="donat-img" src="https://loksadhana.org/wp-content/uploads/Donate-For-Child-Education.png" alt="Donate for Child Education">
                 </div>
             </div>
         </div>
