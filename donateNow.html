@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main-third{
+            width: 100%;
+        }
+        .child-third{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap:10px;
+        }
+        .one-box{
+            width: 33.33%;
+            height: 300px;
+            border: 1px solid #ddd;
+        }
+        .two-box{
+            width: 33.33%;
+            height: 300px;
+            border: 1px solid #ddd;
+        }
+        .third-box{
+            width: 33.33%;
+            height: 300px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="main-third">
+        <div class="child-third">
+            <div class="one-box">
+                <img class="donate-ic" src="images/QR.png" alt="QR Code for Donation">
+            </div>
+            <div class="two-box"></div>
+            <div class="third-box"></div>
+        </div>
+    </div>
 </body>
 </html>
