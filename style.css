@@ -1,8 +1,9 @@
 /* add css new */
-.main-bg-img{
+.main-bg-img {
     width: 100%;
 }
-.child-bg-img{
+
+.child-bg-img {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -10,32 +11,38 @@
     margin-left: 10px;
     /* margin-right: 8px; */
 }
-.img-con-new{
+
+.img-con-new {
     width: 659px;
     height: 405px;
     border-radius: 10px;
     border: 3px solid;
 }
-.img-con-old{
+
+.img-con-old {
     width: 643px;
     height: 405px;
     border-radius: 10px;
     border: 3px solid;
     margin-right: 0px;
 }
-.img-one{
-width: 50%;
+
+.img-one {
+    width: 50%;
 }
-.img-two{
-width: 50%;
+
+.img-two {
+    width: 50%;
 }
-.more-btn{
+
+.more-btn {
     position: relative;
     color: #fff;
 }
-.first-btn{
+
+.first-btn {
     position: absolute;
-    top: 538px;
+    top: 498px;
     left: 539px;
     text-decoration: none;
     color: #fff;
@@ -45,7 +52,8 @@ width: 50%;
     border: none;
     cursor: pointer;
 }
-.second-btn{
+
+.second-btn {
     position: absolute;
     top: -32px;
     left: -129px;
@@ -313,10 +321,11 @@ body {
     margin-bottom: 9px;
 
 }
-  
+
 .container {
     text-align: center;
 }
+
 .animated-text {
     font-size: 40px;
     margin: 20px;
@@ -328,12 +337,19 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-30px);
     }
+
     60% {
         transform: translateY(-15px);
     }
@@ -345,9 +361,12 @@ body {
 }
 
 @keyframes fadeInOut {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
@@ -365,6 +384,7 @@ body {
     from {
         width: 0;
     }
+
     to {
         width: 10em;
     }
@@ -375,7 +395,7 @@ body {
         border-color: transparent;
     }
 }
-  
+
 
 
 
