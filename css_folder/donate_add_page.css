@@ -1,0 +1,116 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .main-third {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .child-third {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allows the boxes to stack vertically on small screens */
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .one-box,
+        .two-box,
+        .third-box {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .one-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donate-ic {
+            /* height: auto;  */
+            /* max-width: 100%; */
+            height: 400px;
+            width: 347px;
+            border-radius: 10px;
+        }
+
+        .two-box p {
+            margin: 5px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .two-box b {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .third-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .third-box label {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .third-box input,
+        .third-box select {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .third-box button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .third-box button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+
+            .one-box,
+            .two-box,
+            .third-box {
+                width: 32%;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .one-box,
+            .two-box,
+            .third-box {
+                width: 100%;
+            }
+        }

@@ -1,183 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Document</title>
-<style>
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Document</title>
+    <link rel="stylesheet" href="css_folder/trustees.css">
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Header Section */
-.header-ab {
-    background: #ff6600;
-    color: #fff;
-    padding: 7px;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
-    position: relative;
-}
-
-/* Team Section */
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.member-box {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: calc(33.333% - 40px);
-    max-width: 300px;
-    flex: 1 1 300px;
-}
-
-.member-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.member-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.member-box h2 {
-    font-size: 1.5em;
-    color: #ff6600;
-    margin-bottom: 10px;
-}
-
-.member-box h3,
-.member-box p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 5px;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ff6600;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .member-box {
-        width: calc(50% - 40px);
-        flex: 1 1 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .member-box {
-        width: 100%;
-        flex: 1 1 100%;
-    }
-}
-</style>
 </head>
-<body>
-<section id="home" class="hero">
-    <div class="container">
-        <!-- Trusties Section -->
-        <h1 class="header-ab">Trusties</h1>
-        <div class="team-container">
-            <div class="member-box">
-                <img src="path/to/member1.jpg" alt="">
-                <h2>Dr. Sharayu Ghole MD(GYN)</h2>
-                <h3>Founder President</h3>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member2.jpg" alt="">
-                <h2>Mrs. Manasi Deshpande</h2>
-                <h3>Secretary</h3>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member3.jpg" alt="">
-                <h2>Mrs. Medha Sahasrabuddhe</h2>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member4.jpg" alt="">
-                <h2>Mrs. Anjali Ghole</h2>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member5.jpg" alt="">
-                <h2>Dr. Saroj Janorkar</h2>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member6.jpg" alt="">
-                <h2>Mrs. Tejaswini Deshmukh</h2>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member7.jpg" alt="">
-                <h2>Mrs. Neeta Kulkarni</h2>
-            </div>
-        </div>
 
-        <!-- Advisory Board Section -->
-        <h1 class="header-ab">Advisory Board</h1>
-        <div class="team-container">
-            <div class="member-box">
-                <img src="path/to/member8.jpg" alt="">
-                <h2>Mr. Danesh Shah</h2>
-                <p>Expert in Financial Management</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-envelope"></i></a>
+<body>
+    <section id="home" class="hero">
+        <div class="container">
+            <!-- Trusties Section -->
+            <h1 class="header-ab">Trusties</h1>
+            <div class="team-container">
+                <div class="member-box">
+                    <img src="path/to/member1.jpg" alt="">
+                    <h2>Dr. Sharayu Ghole MD(GYN)</h2>
+                    <h3>Founder President</h3>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member2.jpg" alt="">
+                    <h2>Mrs. Manasi Deshpande</h2>
+                    <h3>Secretary</h3>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member3.jpg" alt="">
+                    <h2>Mrs. Medha Sahasrabuddhe</h2>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member4.jpg" alt="">
+                    <h2>Mrs. Anjali Ghole</h2>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member5.jpg" alt="">
+                    <h2>Dr. Saroj Janorkar</h2>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member6.jpg" alt="">
+                    <h2>Mrs. Tejaswini Deshmukh</h2>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member7.jpg" alt="">
+                    <h2>Mrs. Neeta Kulkarni</h2>
                 </div>
             </div>
-            <div class="member-box">
-                <img src="path/to/member9.jpg" alt="">
-                <h2>Mrs. Varada Deodhar</h2>
-                <p>Marketing Specialist</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-envelope"></i></a>
+
+            <!-- Advisory Board Section -->
+            <h1 class="header-ab">Advisory Board</h1>
+            <div class="team-container">
+                <div class="member-box">
+                    <img src="path/to/member8.jpg" alt="">
+                    <h2>Mr. Danesh Shah</h2>
+                    <!-- <p>Expert in Financial Management</p> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="member-box">
-                <img src="path/to/member10.jpg" alt="">
-                <h2>CA Snehal Nimbalkar</h2>
-                <p>Chartered Accountant</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-envelope"></i></a>
+                <div class="member-box">
+                    <img src="path/to/member9.jpg" alt="">
+                    <h2>Mrs. Varada Deodhar</h2>
+                    <!-- <p>Marketing Specialist</p> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="member-box">
+                    <img src="path/to/member10.jpg" alt="">
+                    <h2>CA Snehal Nimbalkar</h2>
+                    <!-- <p>Chartered Accountant</p> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </body>
+
 </html>

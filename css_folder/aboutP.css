@@ -1,0 +1,406 @@
+.mian-about {
+    width: 100%;
+    background-color: #fffdfd;
+}
+
+.chid-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.one-about {
+    width: 70%;
+}
+
+.two-about {
+    width: 30%;
+    position: relative;
+}
+
+.img-ab {
+    height: 392px;
+    width: 509px;
+    margin-top: 69px;
+    margin-left: 27px;
+    border: 5px solid;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo h1 {
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pofit-p {
+    font-size: 21px;
+    background: linear-gradient(59deg, #70e1f5, #ffd194, transparent);
+
+    /* background: rgb(48 96 3); */
+    color: #070738;
+    padding: 20px;
+    border-radius: 20px 0px 20px 0px;
+    margin-top: 11px;
+    margin-right: 20px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.main-positon {
+    position: relative;
+}
+
+.child-positon {
+    position: absolute;
+    top: 90px;
+}
+
+.cir-img {
+    height: 339px;
+    width: 339px;
+    border-radius: 99px 0px 99px 0px;
+    border: 5px solid black;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+}
+
+.m-top {
+    /* margin-top: -24px; */
+    margin-bottom: 20px;
+}
+
+.header-ab {
+    /* background: linear-gradient(59deg, #d9d168, transparent); */
+    /* background: linear-gradient(59deg, #EECDA3, #EF629F, transparent); */
+    background: #ff6600;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background: #020641;
+}
+
+/* Member box styling */
+.member-box {
+    background-color: #fff;
+    /* White background for each box */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    flex-basis: calc(33.333% - 40px);
+    /* Three boxes per row with space between */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects */
+}
+
+.member-box:hover {
+    transform: translateY(-10px);
+    /* Lift up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
+}
+
+/* Image styling */
+.member-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* Circular image */
+    margin-bottom: 20px;
+}
+
+/* Member name styling */
+.member-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff6600;
+    /* Accent color for member name */
+}
+
+/* Member title styling */
+.member-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #777;
+    /* Subdued color for titles */
+}
+
+/* Description styling */
+.member-box p {
+    font-size: 1em;
+    color: #555;
+    /* Mid-tone color for descriptions */
+    line-height: 1.5em;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    justify-content: space-around;
+    /* Spreads out items with space in between */
+    gap: 20px;
+    /* Space between member boxes */
+}
+
+.pakhrmaya-text {
+    font-size: 3em;
+    /* Increase font size */
+    font-weight: bold;
+    /* Make the text bold */
+    color: #f27121;
+    /* Set text color to an accent color */
+    text-align: center;
+    /* Center-align the text */
+    text-shadow: 2px 2px 4px rgba(59, 61, 199, 0.3);
+    /* Add a subtle shadow */
+    margin: 20px 0;
+    /* Add some margin above and below */
+    font-family: 'Arial', sans-serif;
+    /* Set a clean, readable font */
+    letter-spacing: 2px;
+    /* Increase spacing between letters */
+}
+
+/* add css */
+
+/* Base styles for mobile-first approach */
+body {
+    font-size: 16px;
+    /* Base font size */
+}
+
+.header-container {
+    padding: 10px;
+}
+
+.logo-heading {
+    flex-direction: column;
+    /* Stack logo and heading vertically on smaller screens */
+}
+
+.dynamic-heading {
+    font-size: 1.5em;
+    /* Smaller font size on mobile */
+}
+
+.navbar ul {
+    flex-direction: column;
+    /* Stack navbar items vertically on smaller screens */
+    gap: 10px;
+}
+
+.navbar ul li a {
+    font-size: 1em;
+    padding: 8px 16px;
+}
+
+.container {
+    flex-direction: column;
+    /* Stack marquee containers vertically on smaller screens */
+    gap: 20px;
+}
+
+.marquee-container {
+    width: 100%;
+    height: 50vh;
+    /* Adjust height to be responsive */
+}
+
+.marquee img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* add stroy css */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #333;
+}
+
+.main-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #70e1f5, #ffd194, transparent);
+
+    /* background: linear-gradient(45deg, #0099f7, #f11712); */
+    z-index: -1;
+    transition: transform 0.5s ease;
+    transform: scale(0);
+}
+
+.card::before {
+    transform-origin: top left;
+}
+
+.card::after {
+    transform-origin: bottom right;
+}
+
+.card:hover::before {
+    transform: scale(1);
+}
+
+.card:hover::after {
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 39%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 10px 0;
+    color: #555;
+    font-size: 20px;
+}
+
+.card p {
+    padding: 0 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+.card button {
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #0099f7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #007acc;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* Media Queries for Larger Screens */
+@media(min-width: 768px) {
+    .header-container {
+        padding: 20px;
+    }
+
+    .logo-heading {
+        flex-direction: row;
+        /* Align logo and heading horizontally on larger screens */
+    }
+
+    .dynamic-heading {
+        font-size: 2em;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .marquee-container {
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+@media(min-width: 1200px) {
+    .header-container {
+        padding: 30px;
+    }
+
+    .dynamic-heading {
+        font-size: 2.5em;
+    }
+
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .navbar ul li a {
+        font-size: 1.4em;
+    }
+
+    .container {
+        gap: 40px;
+    }
+
+    .marquee-container {
+        width: 50%;
+        height: 70vh;
+    }
+}
