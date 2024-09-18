@@ -1,3 +1,4 @@
+/* General styles */
 .mian-about {
     width: 100%;
     background-color: #fffdfd;
@@ -8,6 +9,8 @@
     align-items: center;
     justify-content: space-around;
     gap: 10px;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
 }
 
 .one-about {
@@ -21,22 +24,26 @@
 
 .img-ab {
     height: 392px;
-    width: 509px;
+    width: 100%;
+    /* Set to 100% for responsiveness */
     margin-top: 69px;
-    margin-left: 27px;
+    margin-left: 0;
+    /* Removed margin for mobile view */
     border: 5px solid;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
 }
 
 .logo img {
     height: 50px;
 }
 
-.logo h1 {
+.logo h2 {
     margin: 0 10px;
     font-size: 24px;
     font-weight: bold;
@@ -45,8 +52,6 @@
 .pofit-p {
     font-size: 21px;
     background: linear-gradient(59deg, #70e1f5, #ffd194, transparent);
-
-    /* background: rgb(48 96 3); */
     color: #070738;
     padding: 20px;
     border-radius: 20px 0px 20px 0px;
@@ -61,31 +66,34 @@
     position: relative;
 }
 
-.child-positon {
-    position: absolute;
-    top: 90px;
+.child-position {
+    position: relative;
+    margin-bottom: 20px;
+    /* For spacing between images */
 }
 
 .cir-img {
     height: 339px;
-    width: 339px;
+    width: 100%;
+    /* Set to 100% for responsiveness */
+    max-width: 339px;
     border-radius: 99px 0px 99px 0px;
     border: 5px solid black;
     box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
 
 .m-top {
-    /* margin-top: -24px; */
     margin-bottom: 20px;
 }
 
 .header-ab {
-    /* background: linear-gradient(59deg, #d9d168, transparent); */
-    /* background: linear-gradient(59deg, #EECDA3, #EF629F, transparent); */
     background: #ff6600;
     color: #fff;
-    padding: 10px;
+    padding: 6px;
     text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 8px;
 }
 
 .read-more {
@@ -102,6 +110,63 @@
 .read-more:hover {
     background: #020641;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .chid-about {
+        flex-direction: column;
+        /* Stack elements vertically on small screens */
+        align-items: center;
+    }
+
+    .one-about,
+    .two-about {
+        width: 100%;
+        /* Take full width on small screens */
+    }
+
+    .pofit-p {
+        font-size: 18px;
+        padding: 15px;
+        line-height: 28px;
+    }
+
+    .cir-img {
+        height: auto;
+        width: 90%;
+        /* Reduce image size */
+    }
+
+    .logo h2 {
+        font-size: 20px;
+        /* Smaller font for logo text */
+    }
+}
+
+@media (max-width: 480px) {
+    .pofit-p {
+        font-size: 16px;
+        padding: 10px;
+        line-height: 24px;
+    }
+
+    .cir-img {
+        width: 100%;
+        height: auto;
+        /* Scale images down more */
+    }
+
+    .logo img {
+        height: 40px;
+        /* Smaller logo */
+    }
+
+    .logo h2 {
+        font-size: 18px;
+        /* Adjust logo text */
+    }
+}
+
 
 /* Member box styling */
 .member-box {
@@ -250,7 +315,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .card {
@@ -403,4 +468,89 @@ h1 {
         width: 50%;
         height: 70vh;
     }
+}
+
+/* add css */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #ff6600;
+    /* Updated to match the orange theme */
+    background: linear-gradient(45deg, #70e1f5, #ffd194);
+    /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin-right: 491px;
+    font-weight: 900;
+}
+
+.last-word {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #ff6600;
+    /* Updated to match the orange theme */
+    background: linear-gradient(45deg, #70e1f5, #ffd194);
+    /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 900;
+    /* margin-right: 491px; */
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+    border: 2px solid #ff6600;
+    /* Border to match the theme */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 2px solid #70e1f5;
+    /* Color change on hover */
+}
+
+.card button {
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    /* Match with theme */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #f27121;
+    /* Slightly darker orange on hover */
+    transform: scale(1.05);
+    /* Button grows on hover */
+}
+
+.card h2 {
+    color: #f27121;
+    /* Orange color */
+    font-size: 24px;
+    text-transform: uppercase;
+    /* Makes all card titles uppercase */
+    margin-bottom: 15px;
+}
+
+.card img {
+    width: 39%;
+    height: 200px;
+    object-fit: cover;
 }

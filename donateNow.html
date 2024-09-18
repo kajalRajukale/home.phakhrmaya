@@ -76,27 +76,29 @@
             const data = {};
             formData.forEach((value, key) => data[key] = value);
 
+            console.log('sending this data by email')
+            console.log(data)
             // Replace with your Google Apps Script Web App URL
             const url = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
 
-            try {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
+            // try {
+            //     const response = await fetch(url, {
+            //         method: 'POST',
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify(data)
+            //     });
 
-                if (response.ok) {
-                    alert('Data saved successfully!');
-                } else {
-                    alert('Failed to save data');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred while submitting the form');
-            }
+            //     if (response.ok) {
+            //         alert('Data saved successfully!');
+            //     } else {
+            //         alert('Failed to save data');
+            //     }
+            // } catch (error) {
+            //     console.error('Error:', error);
+            //     alert('An error occurred while submitting the form');
+            // }
         }
     </script>
 
