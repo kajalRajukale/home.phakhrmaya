@@ -1,107 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="lib/css/donate_add_page.css">
+    <link rel="stylesheet" href="lib/css/donate_add_page.css" />
+  </head>
+  <header>
+    <div class="main-header">
+      <div class="samll-header">
+        <div class="nav-1"><a href="index.html">Home</a></div>
+        <div class="nav-1"><a href="donate.html">Donate</a></div>
+        <div class="nav-1"><a href="contact.html">Contact Us</a></div>
+        <div class="nav-1"><a href="trustees.html">Trustees</a></div>
+        <div class="nav-1"><a href="gallery.html">Gallery</a></div>
 
-</head>
-
-<body>
-    <div class="main-third">
-        <div class="child-third">
-            <div class="one-box">
-                <img class="donate-ic" src="images/QR.png" alt="QR Code for Donation">
-            </div>
-            <div class="two-box">
-                <h1 style="color: orangered;">Donate Now</h1>
-                <b>Account holder name:</b>
-                <p>Radhabai Hardiakr Pranijat Mangel Sanstha</p>
-                <b>Bank Name:</b>
-                <p>Vishweshwar Sahakari Bank Ltd., Pune</p>
-                <b>Bank Address:</b>
-                <p>Dhankwadi Branch</p>
-                <b>Account Type:</b>
-                <p>Saving</p>
-                <b>Account Number:</b>
-                <p>004128 100009949</p>
-                <b>IFSC Code:</b>
-                <p>VSBL 0000004</p>
-            </div>
-            <div class="third-box">
-                <form id="donationForm" onsubmit="submitForm(event)">
-                    <label for="name">Full Name of Donor:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" placeholder="Your Address" required>
-
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
-
-                    <label for="pan">PAN Number:</label>
-                    <input type="text" id="pan" name="pan" placeholder="Enter PAN Number" required>
-
-                    <label for="birthdate">Birthdate:</label>
-                    <input type="date" id="birthdate" name="birthdate" required>
-
-                    <label for="email">Email id:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
-
-                    <label for="payment-method" placeholder="please choose Number and email">Please transfer this data
-                        and<br> the transfer history to :</label>
-                    <select id="payment-method" placeholder="please choose Number and email" name="payment-method"
-                        required>
-                        <option value="credit-card">what's App number:9579085270</option>
-                        <option value="debit-card">Email: balwansumati@gmail.com</option>
-                        <!-- <option value="paypal">PayPal</option> -->
-                        <!-- <option value="bank-transfer">Bank Transfer</option> -->
-                    </select>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <div class="icons2">
+          <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
+            <img src="images/icons/insta.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.facebook.com/sumatibalwanschool/"
+            target="_blank"
+          >
+            <img src="images/icons/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://www.youtube.com/@ShurjoNarayani" target="_blank">
+            <img src="images/icons/youtube.png" alt="Youtube" />
+          </a>
         </div>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div class="main-third">
+      <div class="child-third">
+        <div class="one-box">
+          <img
+            class="donate-ic"
+            src="images/QR.png"
+            alt="QR Code for Donation"
+          />
+        </div>
+        <div class="two-box">
+          <h1 style="color: orangered">Donate Now</h1>
+          <b>Account holder name:</b>
+          <p>Radhabai Hardiakr Pranijat Mangel Sanstha</p>
+          <b>Bank Name:</b>
+          <p>Vishweshwar Sahakari Bank Ltd., Pune</p>
+          <b>Bank Address:</b>
+          <p>Dhankwadi Branch</p>
+          <b>Account Type:</b>
+          <p>Saving</p>
+          <b>Account Number:</b>
+          <p>004128 100009949</p>
+          <b>IFSC Code:</b>
+          <p>VSBL 0000004</p>
+        </div>
+        <div class="third-box">
+          <form id="donationForm" onsubmit="submitForm(event)">
+            <label for="name">Full Name of Donor:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Your Address"
+              required
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter Phone Number"
+              required
+            />
+
+            <label for="pan">PAN Number:</label>
+            <input
+              type="text"
+              id="pan"
+              name="pan"
+              placeholder="Enter PAN Number"
+              required
+            />
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required />
+
+            <label for="email">Email id:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+            />
+
+            <label
+              for="payment-method"
+              placeholder="please choose Number and email"
+              >Please transfer this data and<br />
+              the transfer history to :</label
+            >
+            <select
+              id="payment-method"
+              placeholder="please choose Number and email"
+              name="payment-method"
+              required
+            >
+              <option value="credit-card">what's App number:9579085270</option>
+              <option value="debit-card">Email: balwansumati@gmail.com</option>
+              <!-- <option value="paypal">PayPal</option> -->
+              <!-- <option value="bank-transfer">Bank Transfer</option> -->
+            </select>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script>
-        async function submitForm(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
+      async function submitForm(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
 
-            const form = document.getElementById('donationForm');
-            const formData = new FormData(form);
+        const form = document.getElementById("donationForm");
+        const formData = new FormData(form);
 
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
+        const data = {};
+        formData.forEach((value, key) => (data[key] = value));
 
-            console.log('sending this data by email')
-            console.log(data)
-            // Replace with your Google Apps Script Web App URL
-            const url = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+        console.log("sending this data by email");
+        console.log(data);
+        // Replace with your Google Apps Script Web App URL
+        const url = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
 
-            // try {
-            //     const response = await fetch(url, {
-            //         method: 'POST',
-            //         headers: {
-            //             'Content-Type': 'application/json'
-            //         },
-            //         body: JSON.stringify(data)
-            //     });
+        // try {
+        //     const response = await fetch(url, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(data)
+        //     });
 
-            //     if (response.ok) {
-            //         alert('Data saved successfully!');
-            //     } else {
-            //         alert('Failed to save data');
-            //     }
-            // } catch (error) {
-            //     console.error('Error:', error);
-            //     alert('An error occurred while submitting the form');
-            // }
-        }
+        //     if (response.ok) {
+        //         alert('Data saved successfully!');
+        //     } else {
+        //         alert('Failed to save data');
+        //     }
+        // } catch (error) {
+        //     console.error('Error:', error);
+        //     alert('An error occurred while submitting the form');
+        // }
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

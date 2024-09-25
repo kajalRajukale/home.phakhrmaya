@@ -1,125 +1,201 @@
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f9f9f9;
-            /* Light background for better readability */
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+/* General Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  /* Light background for better readability */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-        .main-founder {
-            background: linear-gradient(135deg, #ff6f61, #d33e3e);
-            /* Bold gradient background */
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+.main-founder {
+  background: linear-gradient(135deg, #ff6f61, #d33e3e);
+  /* Bold gradient background */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-        .child-founder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.child-founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-        .one-section,
-        .two-section {
-            width: 100%;
-            max-width: 500px;
-        }
+.one-section,
+.two-section {
+  width: 100%;
+  max-width: 500px;
+}
 
-        /* Headings */
-        .donate-h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin: 0;
-            margin-bottom: 10px;
-            color: #fff;
-            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+/* Headings */
+.donate-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-        h4 {
-            font-size: 20px;
-            margin: 0;
-            margin-bottom: 20px;
-            color: #ffe5e5;
-        }
+h4 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #ffe5e5;
+}
 
-        .donate-para {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #fff;
-            text-align: left;
-            padding: 0 20px;
-        }
+.donate-para {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+  padding: 0 20px;
+}
 
-        b {
-            color: #ffd700;
-            /* Gold color for emphasis */
-        }
+b {
+  color: #ffd700;
+  /* Gold color for emphasis */
+}
 
-        /* Button Styling */
-        .read-more {
-            display: inline-block;
-            text-decoration: none;
-            color: #fff;
-            background: #007bff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 20px;
-        }
+/* Button Styling */
+.read-more {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #007bff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
-        .read-more:hover {
-            background: #0056b3;
-            transform: translateY(-3px);
-            /* Subtle lift effect */
-        }
+.read-more:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  /* Subtle lift effect */
+}
 
-        .div-img-donate {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
+.div-img-donate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-        .donat-img {
-            margin-left: -166px;
-            height: 305px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
+.donat-img {
+  margin-left: -166px;
+  height: 305px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .child-founder {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+/* Responsive Design */
+@media (min-width: 768px) {
+  .child-founder {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-            .one-section,
-            .two-section {
-                max-width: 450px;
-            }
-        }
+  .one-section,
+  .two-section {
+    max-width: 450px;
+  }
+}
 
-        @media (max-width: 767px) {
-            .donate-h1 {
-                font-size: 36px;
-            }
+@media (max-width: 767px) {
+  .donate-h1 {
+    font-size: 36px;
+  }
 
-            .donate-para {
-                font-size: 16px;
-            }
+  .donate-para {
+    font-size: 16px;
+  }
 
-            .read-more {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
+  .read-more {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Header styling */
+.main-header {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.samll-header {
+  /* Adjusted to fix typo from 'small-header' */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Smaller gap to accommodate icons */
+  padding: 16px;
+  color: #000;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+}
+
+.nav-1:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.icons2 {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: left; /* Spacing between GALLERY and icons */
+}
+
+.icons2 a {
+  display: block;
+}
+
+.icons2 img {
+  width: 30px; /* Adjusted size to fit in line */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.icons2 a:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .samll-header {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .icons2 img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .samll-header {
+    flex-direction: column; /* Stack header items vertically */
+    gap: 10px;
+    text-align: center;
+  }
+
+  .icons2 {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .icons2 img {
+    width: 20px;
+    height: 20px;
+  }
+}
