@@ -78,6 +78,17 @@ h2 {
 .nav-1:hover {
   color: blue;
   cursor: pointer;
+  text-decoration: none;
+}
+.add-nav-bar {
+  text-decoration: none;
+  cursor: pointer;
+}
+.add-nav-bar:hover {
+  background-color: green;
+  color: #fff;
+  padding: 2px;
+  border-radius: 4px;
 }
 
 .icons2 {
