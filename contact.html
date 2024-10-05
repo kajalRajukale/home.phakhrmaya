@@ -9,6 +9,11 @@
   <header>
     <div class="main-header">
       <div class="samll-header">
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <div class="nav-1">
           <a href="index.html" class="add-nav-bar">Home</a>
         </div>
@@ -16,7 +21,7 @@
           <a href="donate.html" class="add-nav-bar">Donate</a>
         </div>
         <div class="nav-1">
-          <a href="contact.html" class="add-nav-bar">Contact Us</a>
+          <a href="contact.html" class="add-nav-bar active">Contact Us</a>
         </div>
         <div class="nav-1">
           <a href="trustees.html" class="add-nav-bar">Trustees</a>
@@ -24,7 +29,6 @@
         <div class="nav-1">
           <a href="gallery.html" class="add-nav-bar">Gallery</a>
         </div>
-
         <div class="icons2">
           <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
             <img src="images/icons/insta.png" alt="Instagram" />
@@ -42,7 +46,6 @@
       </div>
     </div>
   </header>
-
   <body>
     <header>
       <h1>Contact Us</h1>
@@ -54,13 +57,13 @@
         <p>
           <b>Dr. Sharayu Ghole</b> (Founder President): +91 9373731595
           <span style="color: #f9010a"
-            ><br />
+            ><br /><br />
             (Plaese no call only WhatsApp Msg)</span
           >
         </p>
         <p><b>Manasi Deshpande</b> (Secretary): +91 9226180541</p>
         <p>
-          <b>School Office</b>:+91 9579085270<span style="color: green">
+          <b>School Office</b> :+91 9579085270<span style="color: green">
             (Call Time: 11:00 am to 4:30 pm)</span
           >
         </p>
@@ -70,7 +73,7 @@
       <h2>Location</h2>
       <div class="contact-info">
         <p>
-          Sumati Balvan Gujar Nimbalkar Wadi, Katraj, Pune, 411046 Maharashtra
+          Sumati Balvan , Gujar Nimbalkar Wadi, Katraj, Pune, 411046 Maharashtra
         </p>
         <a
           href="https://www.bing.com/maps?q=sumati+balwan+school&FORM=HDRSC6"
@@ -80,5 +83,15 @@
         >
       </div>
     </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navItems = document.querySelectorAll(".nav-1");
+
+      menuToggle.addEventListener("click", () => {
+        navItems.forEach((item) => {
+          item.classList.toggle("show");
+        });
+      });
+    </script>
   </body>
 </html>

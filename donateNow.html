@@ -9,11 +9,16 @@
   <header>
     <div class="main-header">
       <div class="samll-header">
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <div class="nav-1">
           <a href="index.html" class="add-nav-bar">Home</a>
         </div>
         <div class="nav-1">
-          <a href="donate.html" class="add-nav-bar">Donate</a>
+          <a href="donate.html" class="add-nav-bar active">Donate</a>
         </div>
         <div class="nav-1">
           <a href="contact.html" class="add-nav-bar">Contact Us</a>
@@ -24,7 +29,6 @@
         <div class="nav-1">
           <a href="gallery.html" class="add-nav-bar">Gallery</a>
         </div>
-
         <div class="icons2">
           <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
             <img src="images/icons/insta.png" alt="Instagram" />
@@ -54,9 +58,9 @@
           />
         </div>
         <div class="two-box">
-          <h1 style="color: orangered">Donate Now</h1>
+          <h1 style="color: orangered; font-size: 25px">Donate Now</h1>
           <b>Account holder name:</b>
-          <p>Radhabai Hardiakr Pranijat Mangel Sanstha</p>
+          <p>Radhabai Hardikar Pranijat Mangal Sanstha</p>
           <b>Bank Name:</b>
           <p>Vishweshwar Sahakari Bank Ltd., Pune</p>
           <b>Bank Address:</b>
@@ -142,6 +146,15 @@
       </div>
     </div>
     <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navItems = document.querySelectorAll(".nav-1");
+
+      menuToggle.addEventListener("click", () => {
+        navItems.forEach((item) => {
+          item.classList.toggle("show");
+        });
+      });
+
       async function submitForm(event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
@@ -155,25 +168,6 @@
         console.log(data);
         // Replace with your Google Apps Script Web App URL
         const url = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
-
-        // try {
-        //     const response = await fetch(url, {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(data)
-        //     });
-
-        //     if (response.ok) {
-        //         alert('Data saved successfully!');
-        //     } else {
-        //         alert('Failed to save data');
-        //     }
-        // } catch (error) {
-        //     console.error('Error:', error);
-        //     alert('An error occurred while submitting the form');
-        // }
       }
     </script>
   </body>

@@ -12,31 +12,47 @@
     </style>
 
 </head>
+
 <header>
     <div class="main-header">
       <div class="samll-header">
-        <div class="nav-1"><a href="index.html" class="add-nav-bar">Home</a></div>
-        <div class="nav-1"><a href="donate.html" class="add-nav-bar">Donate</a></div>
-        <div class="nav-1"><a href="contact.html" class="add-nav-bar">Contact Us</a></div>
-        <div class="nav-1"><a href="trustees.html" class="add-nav-bar">Trustees</a></div>
-        <div class="nav-1"><a href="gallery.html" class="add-nav-bar">Gallery</a></div>
-        
-        
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="nav-1">
+          <a href="index.html" class="add-nav-bar">Home</a>
+        </div>
+        <div class="nav-1">
+          <a href="donate.html" class="add-nav-bar active">Donate</a>
+        </div>
+        <div class="nav-1">
+          <a href="contact.html" class="add-nav-bar">Contact Us</a>
+        </div>
+        <div class="nav-1">
+          <a href="trustees.html" class="add-nav-bar">Trustees</a>
+        </div>
+        <div class="nav-1">
+          <a href="gallery.html" class="add-nav-bar">Gallery</a>
+        </div>
         <div class="icons2">
           <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
-            <img src="images/icons/insta.png" alt="Instagram">
+            <img src="images/icons/insta.png" alt="Instagram" />
           </a>
-          <a href="https://www.facebook.com/sumatibalwanschool/" target="_blank">
-            <img src="images/icons/facebook.png" alt="Facebook">
+          <a
+            href="https://www.facebook.com/sumatibalwanschool/"
+            target="_blank"
+          >
+            <img src="images/icons/facebook.png" alt="Facebook" />
           </a>
           <a href="https://www.youtube.com/@ShurjoNarayani" target="_blank">
-            <img src="images/icons/youtube.png" alt="Youtube">
+            <img src="images/icons/youtube.png" alt="Youtube" />
           </a>
         </div>
       </div>
     </div>
   </header>
-  
 <body>
     <div class="main-card">
         <div class="child-card">
@@ -48,16 +64,16 @@
                     </div>
                 </div>
 
-                <h3 class="sub-heading">RADHABAI HARDIKAR PRANIJAT MANGAL SANSTHA</h3>
+                <!-- <h3 class="sub-heading">RADHABAI HARDIKAR PRANIJAT MANGAL SANSTHA</h3> -->
                 <p class="first-para">Discover Pune City's exclusive IBT program:<br>
                     The <u>only school</u> in Pune that offers Agriculture & Animal Husbandry,
                     Engineering, Food &
                     Health,<br>
                     Energy & Electronics</p>
                 <div class="sp-img-mix-con"><img class="img-one-cl" src="images/SumatiActivities.png">
-                    <span class="sp-con-1">I Read, I forget. I see, I shall sometimes remember. I do, I
+                    <p class="sp-con-1">I Read, I forget. I see, I shall sometimes remember. I do, I
                         shall always
-                        remember.</span>
+                        remember.</p>
                 </div>
             </div>
         </div>
@@ -70,15 +86,15 @@
                 </div>
             </div>
             <div class="box-two">
-                <h2 style="color: #fff; font-weight:900;">SUMATI BALWAN</h2>
+                <!-- <h2 style="color: #fff; font-weight:900;">SUMATI BALWAN</h2> -->
                 <H1 style="color: #fff;"><u>OUR JOURNEY</u></H1>
                 <p class="sec-para-cl">
                     Established in 1999, our journey began with a simple mission: to provide a loving
                     home for destitute
                     children. What started with just three residents has blossomed into Sumati Balwan,
                     where we now
-                    nurture over 650 students learning under model of IBT(INTRODUCTION TO BASIC
-                    TECHNOLOGY)made
+                    nurture over 650 students learning under model of IBT (INTRODUCTION TO BASIC
+                    TECHNOLOGY) made
                     available by SSC Board.<br>
 
                     Our educational approach goes beyond academics, fostering emotional intelligence,
@@ -275,10 +291,17 @@
             <div><img class="academics-img" src="images/SumatiAcedemy2.png">
             </div>
         </div>
-
-
     </div>
-
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navItems = document.querySelectorAll(".nav-1");
+  
+        menuToggle.addEventListener("click", () => {
+          navItems.forEach((item) => {
+            item.classList.toggle("show");
+          });
+        });
+        </script>
 
 </body>
 

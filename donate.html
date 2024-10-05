@@ -9,11 +9,16 @@
   <header>
     <div class="main-header">
       <div class="samll-header">
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <div class="nav-1">
           <a href="index.html" class="add-nav-bar">Home</a>
         </div>
         <div class="nav-1">
-          <a href="donate.html" class="add-nav-bar">Donate</a>
+          <a href="donate.html" class="add-nav-bar active">Donate</a>
         </div>
         <div class="nav-1">
           <a href="contact.html" class="add-nav-bar">Contact Us</a>
@@ -24,7 +29,6 @@
         <div class="nav-1">
           <a href="gallery.html" class="add-nav-bar">Gallery</a>
         </div>
-
         <div class="icons2">
           <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
             <img src="images/icons/insta.png" alt="Instagram" />
@@ -53,11 +57,11 @@
           <div class="donate-para">
             <p class="para-donate">
               By donating just <b style="font-weight: 900">₹10,000,</b> you can
-              sponsor <b style="font-weight: 900">one child’s Education</b>.
+              Sponsor <b style="font-weight: 900">one child’s Education</b>.
             </p>
             <p class="para-donate">
-              you can
-              <b style="font-weight: 900">sponsor a child</b> (residential) by
+              You can
+              <b style="font-weight: 900">Sponsor a child</b> (residential) by
               donating RS.<b style="font-weight: 900"> 30,000/-</b> per year.
             </p>
           </div>
@@ -75,5 +79,15 @@
         </div>
       </div>
     </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navItems = document.querySelectorAll(".nav-1");
+
+      menuToggle.addEventListener("click", () => {
+        navItems.forEach((item) => {
+          item.classList.toggle("show");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -156,7 +156,7 @@
 
 .ag-heading {
   color: #2a2abb;
-  font-size: 27px;
+  font-size: 23px;
   margin-left: 28px;
   font-weight: 800;
 }
@@ -443,88 +443,134 @@
 }
 
 /* Header styling */
-.main-header {
-  width: 100%;
-  background-color: #f4f4f4;
-}
 
 .samll-header {
-  /* Adjusted to fix typo from 'small-header' */
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 30px; /* Smaller gap to accommodate icons */
-  padding: 16px;
-  color: #000;
-  font-weight: 900;
-  font-family: Arial, sans-serif;
-}
-
-.nav-1:hover {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
-}
-.add-nav-bar {
-  text-decoration: none;
-  cursor: pointer;
-}
-.add-nav-bar:hover {
-  background-color: green;
-  color: #fff;
-  padding: 2px;
-  border-radius: 4px;
-}
-
-.icons2 {
-  display: flex;
-  gap: 15px;
   align-items: center;
-  margin: left; /* Spacing between GALLERY and icons */
+  gap: 10px;
+  padding: 16px;
+  /* color: #000; */
+  font-weight: 900;
+  background-color: #1d932d;
+
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icons2 a {
+.sidebar {
+  width: 250px;
+  /* background-color: #333; */
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
   display: block;
+  padding: 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
+.menu a:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.icons img,
 .icons2 img {
-  width: 30px; /* Adjusted size to fit in line */
-  height: 30px;
+  width: 32px;
+  height: 34px;
+  margin-left: 10px;
   transition: transform 0.3s ease;
 }
 
-.icons2 a:hover img {
-  transform: scale(1.1);
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2);
 }
 
-/* Responsive behavior */
-@media screen and (max-width: 768px) {
-  .samll-header {
-    gap: 20px;
-    font-size: 16px;
-  }
-
-  .icons2 img {
-    width: 22px;
-    height: 22px;
-  }
+.icons2 img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 480px) {
-  .samll-header {
-    flex-direction: column; /* Stack header items vertically */
-    gap: 10px;
-    text-align: center;
-  }
+/* Header Styling */
 
-  .icons2 {
-    justify-content: center;
-    margin-left: 0;
-    margin-top: 10px;
-  }
+/* Header styling */
 
-  .icons2 img {
-    width: 20px;
-    height: 20px;
-  }
+.samll-header {
+  display: flex;
+  justify-content: center; /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.add-nav-bar.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Adjustments for the main-header */
+.main-header {
+  padding: 10px;
+}
+.icons img,
+.icons2 img {
+  width: 30px; /* Set the same width for all icons */
+  height: 30px; /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
 }
