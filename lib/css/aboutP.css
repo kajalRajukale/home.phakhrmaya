@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  /* Allow wrapping on small screens */
+  justify-content: center;
 }
 
 .logo img {
@@ -370,6 +370,7 @@ h1 {
   width: 39%;
   height: 200px;
   object-fit: cover;
+  margin-top: 13px;
 }
 
 .card h2 {

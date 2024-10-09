@@ -32,6 +32,13 @@ body {
   margin: 0 auto;
 }
 
+.para-con-p {
+  margin-top: -20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
 /* Header */
 .header {
   grid-column: 1 / 3;

@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   padding: 20px;
   margin: 0 auto;
-  background: #ff6f61;
+  background: #ff934b;
   width: fit-content; /* This ensures the content fits around the child elements */
 }
 

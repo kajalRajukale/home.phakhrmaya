@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="lib/css/admin_page.css" />
+  </head>
+  <body>
+    <h1>Admin Dashboard</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>PAN Number</th>
+          <th>Birthdate</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="form-data-table">
+        <!-- Submitted form data will be added here -->
+      </tbody>
+    </table>
+
+    <script>
+      // Function to fetch and display submitted form data
+      function loadFormData() {
+        const formData =
+          JSON.parse(localStorage.getItem("donationFormData")) || [];
+
+        const tableBody = document.getElementById("form-data-table");
+        formData.forEach((data) => {
+          const row = `<tr>
+                        <td>${data.name}</td>
+                        <td>${data.address}</td>
+                        <td>${data.phone}</td>
+                        <td>${data.pan}</td>
+                        <td>${data.birthdate}</td>
+                        <td>${data.email}</td>
+                      </tr>`;
+          tableBody.innerHTML += row;
+        });
+      }
+
+      // Call loadFormData on page load
+      window.onload = loadFormData;
+    </script>
+  </body>
+</html>
