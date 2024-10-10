@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff;
+  background: #fff; /* Ensure background is white */
   margin: 0;
   padding: 0;
   color: #333;
@@ -14,8 +14,8 @@ body {
   flex-direction: column;
   padding: 20px;
   margin: 0 auto;
-  background: #ff934b;
-  width: fit-content; /* This ensures the content fits around the child elements */
+  background: #fff; /* Ensure white background for this container */
+  width: fit-content;
 }
 
 /* Child containers */
@@ -25,10 +25,11 @@ body {
   align-items: center;
   width: fit-content;
   margin: 20px 0;
+  background: #fff; /* Keep background white for child container */
 }
 
 b {
-  color: #ffd700;
+  color: #0049f3bb;
 }
 
 /* Button Styling */
@@ -58,7 +59,6 @@ b {
 }
 
 .donat-img {
-  /* margin-left: -166px; */
   height: 305px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -67,7 +67,7 @@ b {
 /* Responsive Design */
 @media (min-width: 768px) {
   .child-founder {
-    flex-direction: row;
+    flex-direction: row; /* Display content side-by-side in desktop view */
     justify-content: space-between;
   }
 
@@ -78,6 +78,10 @@ b {
 }
 
 @media (max-width: 767px) {
+  .child-founder {
+    flex-direction: column; /* Stack elements vertically on mobile */
+  }
+
   .donate-h1 {
     font-size: 36px;
   }
@@ -93,11 +97,12 @@ b {
 
   .donat-img {
     margin-left: 0;
+    width: 100%; /* Ensure the image takes full width in mobile */
+    height: auto; /* Adjust the height for responsive behavior */
   }
 }
 
 /* Header styling */
-
 .samll-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
@@ -109,6 +114,7 @@ b {
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .add-nav-bar {
   text-decoration: none;
   color: white;
@@ -147,6 +153,7 @@ b {
 .main-header {
   padding: 10px;
 }
+
 .icons img,
 .icons2 img {
   width: 30px; /* Set the same width for all icons */
@@ -163,6 +170,7 @@ b {
 .icons2 {
   display: flex;
 }
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .samll-header {
@@ -188,5 +196,3 @@ b {
     display: flex; /* Show menu toggle */
   }
 }
-
-/* Existing styles remain unchanged */
