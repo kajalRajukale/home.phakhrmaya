@@ -32,6 +32,22 @@ b {
   color: #0049f3bb;
 }
 
+/* .logo {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: -46px;
+  left: 323px; 
+} */
+/* 
+.logo {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: -46px;
+  left: 323px;
+} */
+
 /* Button Styling */
 .read-more {
   display: inline-block;
