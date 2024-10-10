@@ -74,7 +74,6 @@
 }
 
 /* Header styling */
-/* Header styling */
 
 .samll-header {
   display: flex;
@@ -137,3 +136,34 @@
 .icons2 img:hover {
   transform: scale(1.2); /* Scale effect on hover */
 }
+
+.icons2 {
+  display: flex;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .samll-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none; /* Hide nav items by default */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex; /* Show active item */
+  }
+
+  .nav-1.show {
+    display: flex; /* Show all items when menu is active */
+    flex-direction: column; /* Stack items */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle */
+  }
+}
+
+/* Existing styles remain unchanged */

@@ -154,5 +154,16 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navItems = document.querySelectorAll(".nav-1");
+
+      menuToggle.addEventListener("click", () => {
+        navItems.forEach((item) => {
+          item.classList.toggle("show");
+        });
+      });
+    </script>
   </body>
 </html>

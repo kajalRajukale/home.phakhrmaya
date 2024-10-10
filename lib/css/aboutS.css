@@ -1,111 +1,99 @@
-* {
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+/* Header styling */
+
+.samll-header {
+  display: flex;
+  justify-content: center; /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevent scrolling */
+.add-nav-bar:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
 }
 
-.image-container {
-  position: relative; /* Positioning for absolute children */
-  width: 100vw; /* Full width of the viewport */
-  height: 100vh; /* Full height of the viewport */
-  overflow: hidden; /* Hide overflowing images */
+.add-nav-bar.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
 }
 
-.slide {
-  position: absolute; /* Position images absolutely within the container */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* Show the active image */
-.slide.active {
-  opacity: 1; /* Show the active image */
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
-/* Image styles */
-.slide img {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
-  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition for transform and filter */
+/* Adjustments for the main-header */
+.main-header {
+  padding: 10px;
+}
+.icons img,
+.icons2 img {
+  width: 30px; /* Set the same width for all icons */
+  height: 30px; /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Ensure the transition is uniform */
 }
 
-/* Brightness effect on the active image */
-.slide.active img {
-  filter: brightness(1.2); /* Make the active image brighter */
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
 }
 
-/* Hover effect */
-.slide:hover img {
-  transform: scale(1.05); /* Slightly scale up on hover */
+.icons2 {
+  display: flex;
 }
-
-/* Keyframes for fading */
-@keyframes fade {
-  0%,
-  15% {
-    opacity: 1; /* Fully visible */
-  }
-  16%,
-  100% {
-    opacity: 0; /* Fully hidden */
-  }
-}
-
-/* Animation timing for each slide */
-.slide:nth-child(1) {
-  animation: fade 18s infinite; /* Display first image */
-}
-
-.slide:nth-child(2) {
-  animation: fade 18s infinite 3s; /* Delay to show second image */
-}
-
-.slide:nth-child(3) {
-  animation: fade 18s infinite 6s; /* Delay to show third image */
-}
-
-.slide:nth-child(4) {
-  animation: fade 18s infinite 9s; /* Delay to show fourth image */
-}
-
-.slide:nth-child(5) {
-  animation: fade 18s infinite 12s; /* Delay to show fifth image */
-}
-
-.slide:nth-child(6) {
-  animation: fade 18s infinite 15s; /* Delay to show sixth image */
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 1280px) {
-  .image-container {
-    height: 70vh; /* Reduce height on smaller screens like tablets */
-  }
-}
-
-@media (max-width: 1024px) {
-  .image-container {
-    height: 60vh; /* Further reduce height for smaller screens */
-  }
-}
-
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .image-container {
-    height: 50vh; /* Further reduce height on mobile */
+  .samll-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none; /* Hide nav items by default */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex; /* Show active item */
+  }
+
+  .nav-1.show {
+    display: flex; /* Show all items when menu is active */
+    flex-direction: column; /* Stack items */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle */
   }
 }
 
-@media (max-width: 480px) {
-  .image-container {
-    height: 40vh; /* Further reduce height on very small screens */
-  }
-}
+/* Existing styles remain unchanged */
