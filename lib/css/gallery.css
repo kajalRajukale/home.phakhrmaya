@@ -80,7 +80,7 @@
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
   gap: 10px;
-  padding: 16px;
+  padding: 10px;
   font-weight: 900;
   background-color: #1d932d;
   font-family: Arial, sans-serif;
@@ -96,13 +96,13 @@
 }
 
 .add-nav-bar:hover {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+  color: #000;
+  border-bottom: 2px solid #0049f3bb;
 }
 
 .add-nav-bar.active {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+  color: #000;
+  border-bottom: 2px solid #0049f3bb;
 }
 
 /* Menu Toggle Styles */

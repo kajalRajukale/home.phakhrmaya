@@ -40,6 +40,7 @@
   color: #555;
   margin-bottom: 16px;
   text-align: justify;
+  font-family: sans-serif;
 }
 
 .bold {
@@ -356,6 +357,10 @@ body {
   height: 50vh;
   /* Adjust height to be responsive */
 }
+.f-head {
+  font-size: 25px;
+  color: #fff;
+}
 
 .marquee img {
   width: 100%;
@@ -667,13 +672,12 @@ h1 {
 }
 
 /* Header styling */
-
 .samll-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
   gap: 10px;
-  padding: 16px;
+  padding: 10px;
   font-weight: 900;
   background-color: #1d932d;
   font-family: Arial, sans-serif;
@@ -689,13 +693,13 @@ h1 {
 }
 
 .add-nav-bar:hover {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+  color: #111010;
+  border-bottom: 2px solid #0049f3bb;
 }
 
 .add-nav-bar.active {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+  color: #050505;
+  border-bottom: 2px solid #0049f3bb;
 }
 
 /* Menu Toggle Styles */
