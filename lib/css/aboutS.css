@@ -5,7 +5,7 @@
 }
 /* Header styling */
 
-.samll-header {
+.small-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
@@ -69,7 +69,7 @@
 }
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .samll-header {
+  .small-header {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to start */
   }

@@ -119,7 +119,7 @@ b {
 }
 
 /* Header styling */
-.samll-header {
+.small-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
@@ -143,6 +143,7 @@ b {
   border-bottom: 2px solid #ffcc00;
 }
 .add-nav-bar.active {
+  color: black;
   border-bottom: 2px solid #ffcc00;
 }
 
@@ -185,7 +186,7 @@ b {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .samll-header {
+  .small-header {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to start */
   }

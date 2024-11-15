@@ -6,31 +6,32 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-/* Add this to your contact.css file */
-header h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #333;
 }
 
 header {
   width: 100%;
-  /* background-color: #ff6f61; */
   color: #000;
-  /* padding: 20px; */
   text-align: center;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
-/* Add this to your contact.css file */
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.contact-table {
+  tr>td {
+    padding-right: 2em;
+    padding-bottom: 1em;
+  }
+  
+}
 .contact-info {
   background-color: #f9f9f9;
   padding: 20px;
@@ -61,50 +62,12 @@ h2 {
   color: #333;
 }
 
-/* 
-.container {
-  max-width: 600px;
-  background: #fff;
-  padding: 20px;
-  margin-top: -20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #4caf50;
-  padding-bottom: 5px;
-}
-
-.contact-info p,
-.contact-info a {
-  margin: 10px 0;
-  font-size: 1em;
-  color: #666;
-} */
-
-/* .btn-map {
-  display: block;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: #ff6f61;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  text-align: center;
-} */
-
 .btn-map:hover {
   background-color: #388e3c;
 }
 
-/* Header styling */
-
-.samll-header {
+.small-header {
   display: flex;
-  justify-content: center; /* Adjusted for mobile */
   align-items: center;
   gap: 10px;
   padding: 10px;
@@ -113,6 +76,7 @@ h2 {
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .add-nav-bar {
   text-decoration: none;
   color: white;
@@ -121,16 +85,20 @@ h2 {
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 }
+
 .add-nav-bar:hover {
   border-bottom: 2px solid #ffcc00;
 }
+
 .add-nav-bar.active {
+  color: black;
   border-bottom: 2px solid #ffcc00;
 }
 
 /* Menu Toggle Styles */
 .menu-toggle {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   flex-direction: column;
   cursor: pointer;
 }
@@ -147,45 +115,59 @@ h2 {
 .main-header {
   padding: 10px;
 }
+
 .icons img,
 .icons2 img {
-  width: 30px; /* Set the same width for all icons */
-  height: 30px; /* Set the same height for all icons */
+  width: 30px;
+  /* Set the same width for all icons */
+  height: 30px;
+  /* Set the same height for all icons */
   margin-left: 10px;
-  transition: transform 0.3s ease; /* Ensure the transition is uniform */
+  transition: transform 0.3s ease;
+  /* Ensure the transition is uniform */
 }
 
 .icons img:hover,
 .icons2 img:hover {
-  transform: scale(1.2); /* Scale effect on hover */
+  transform: scale(1.2);
+  /* Scale effect on hover */
 }
 
 .icons2 {
   display: flex;
 }
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .samll-header {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to start */
+  .small-header {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-start;
+    /* Align items to start */
   }
 
   .nav-1 {
-    display: none; /* Hide nav items by default */
-    width: 100%; /* Full width for mobile */
+    display: none;
+    /* Hide nav items by default */
+    width: 100%;
+    /* Full width for mobile */
   }
 
   .nav-1.active {
-    display: flex; /* Show active item */
+    display: flex;
+    /* Show active item */
   }
 
   .nav-1.show {
-    display: flex; /* Show all items when menu is active */
-    flex-direction: column; /* Stack items */
+    display: flex;
+    /* Show all items when menu is active */
+    flex-direction: column;
+    /* Stack items */
   }
 
   .menu-toggle {
-    display: flex; /* Show menu toggle */
+    display: flex;
+    /* Show menu toggle */
   }
 }
 

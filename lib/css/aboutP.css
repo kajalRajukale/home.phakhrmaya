@@ -669,7 +669,7 @@ h1 {
 }
 
 /* Header styling */
-.samll-header {
+.small-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
@@ -693,6 +693,7 @@ h1 {
   border-bottom: 2px solid #ffcc00;
 }
 .add-nav-bar.active {
+  color: black;
   border-bottom: 2px solid #ffcc00;
 }
 
@@ -733,7 +734,7 @@ h1 {
 }
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .samll-header {
+  .small-header {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to start */
   }
