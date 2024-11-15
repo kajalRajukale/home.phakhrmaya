@@ -3,7 +3,7 @@
   --primary-bg-color: #f0f0f0;
   --header-bg-color: #2a7a16;
   /* --sidebar-gradient: linear-gradient(45deg, #fdfc47, #1d932d); */
-  --footer-bg-color: #0bee1e;
+  /* --footer-bg-color: #0bee1e; */
   --text-color-white: #fff;
   --text-hover-color: #ccc;
 }
@@ -326,7 +326,7 @@ body {
     top: 60px;
     left: 0;
     width: 100%;
-    background: var(--sidebar-gradient);
+    background: green;
     z-index: 10;
   }
 
