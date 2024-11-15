@@ -1,15 +1,11 @@
-
-
-/* Gallery section styling */
 .gallery {
-  /* padding: 50px 0; */
   background-color: #f9f9f9;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .header {
@@ -23,7 +19,6 @@
   position: relative;
 }
 
-/* Title styling */
 .gallery h2 {
   text-align: center;
   font-size: 2.5em;
@@ -135,8 +130,6 @@
   transition: 0.3s;
 }
 
-/* Adjustments for the main-header */
-
 .icons img,
 .icons2 img {
   width: 30px;
@@ -181,15 +174,10 @@
 
   .nav-1.show {
     display: flex;
-    /* Show all items when menu is active */
     flex-direction: column;
-    /* Stack items */
   }
 
   .menu-toggle {
     display: flex;
-    /* Show menu toggle */
   }
 }
-
-/* Existing styles remain unchanged */

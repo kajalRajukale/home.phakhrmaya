@@ -1,21 +1,11 @@
-/* General styles */
-.mian-about {
-  width: 100%;
-  background-color: #fffdfd;
-}
-
-.chid-about {
+.child {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 10px;
   flex-wrap: wrap;
-  /* Allow wrapping on small screens */
 }
 
-/* .one-about {
-  width: 70%;
-} */
 .one-about {
   background-color: #f5f5f5;
   padding: 20px;
@@ -38,8 +28,6 @@
 .pofit-p {
   font-size: 16px;
   color: #555;
-  /* margin-bottom: 16px; */
-  /* text-align: justify; */
   font-family: sans-serif;
 }
 
@@ -65,14 +53,11 @@ b {
 .img-ab {
   height: 392px;
   width: 100%;
-  /* Set to 100% for responsiveness */
   margin-top: 69px;
   margin-left: 0;
-  /* Removed margin for mobile view */
   border: 5px solid;
 }
 
-/* New CSS for Success Stories Section */
 .new {
   font-size: 28px;
   font-weight: bold;
@@ -111,14 +96,12 @@ b {
   margin-bottom: 30px;
 }
 
-.pofit-p {
+.block {
   font-size: 21px;
-  background: linear-gradient(59deg, #70e1f5, #ffd194, transparent);
   color: #070738;
   padding: 14px;
   line-height: 36px;
-  /* text-align: center; */
-  font-weight: 700;
+
 }
 
 .main-positon {
@@ -128,13 +111,11 @@ b {
 .child-position {
   position: relative;
   margin-bottom: 20px;
-  /* For spacing between images */
 }
 
 .cir-img {
   height: 339px;
   width: 100%;
-  /* Set to 100% for responsiveness */
   max-width: 339px;
   border-radius: 99px 0px 99px 0px;
   border: 5px solid black;
@@ -593,7 +574,7 @@ h1 {
 }
 
 /* add css */
-h1 {
+OBSOLETE_h1 {
   /* text-align: center; */
   font-size: 32px;
   color: #ff6600;
@@ -640,7 +621,6 @@ h1 {
   border: none;
   border-radius: 5px;
   background-color: #ff6600;
-  /* Match with theme */
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -648,17 +628,13 @@ h1 {
 
 .card button:hover {
   background-color: #f27121;
-  /* Slightly darker orange on hover */
   transform: scale(1.05);
-  /* Button grows on hover */
 }
 
 .card h2 {
   color: #f27121;
-  /* Orange color */
   font-size: 24px;
   text-transform: uppercase;
-  /* Makes all card titles uppercase */
   margin-bottom: 15px;
 }
 
@@ -669,7 +645,7 @@ h1 {
 }
 
 /* Header styling */
-.small-header {
+.samll-header {
   display: flex;
   justify-content: center; /* Adjusted for mobile */
   align-items: center;
@@ -693,7 +669,6 @@ h1 {
   border-bottom: 2px solid #ffcc00;
 }
 .add-nav-bar.active {
-  color: black;
   border-bottom: 2px solid #ffcc00;
 }
 
@@ -734,7 +709,7 @@ h1 {
 }
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .small-header {
+  .samll-header {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to start */
   }

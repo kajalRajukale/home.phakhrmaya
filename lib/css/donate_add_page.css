@@ -22,7 +22,8 @@ body {
 
 .one-box,
 .two-box,
-.third-box {
+.third-box,
+.donation-box {
   width: 100%;
   background-color: #fff;
   padding: 20px;
@@ -95,6 +96,7 @@ body {
 .third-box button:hover {
   background-color: #0056b3;
 }
+
 
 input,
 select {
