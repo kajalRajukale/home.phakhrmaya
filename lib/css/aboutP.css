@@ -691,12 +691,12 @@ h1 {
 
 .add-nav-bar:hover {
   color: #111010;
-  border-bottom: 2px solid #0049f3bb;
+  border-bottom: 2px solid #ffcc00;
 }
 
 .add-nav-bar.active {
   color: #050505;
-  border-bottom: 2px solid #0049f3bb;
+  border-bottom: 2px solid #ffcc00;
 }
 
 /* Menu Toggle Styles */
