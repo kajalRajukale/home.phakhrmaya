@@ -61,9 +61,10 @@ body {
 }
 
 .logo {
-  width: 60px; /* Larger size for laptops */
+  width: 58px;
   height: auto;
   margin-bottom: 10px;
+  margin-top: 6px;
 }
 
 .dynamic-heading {

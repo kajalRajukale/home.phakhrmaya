@@ -121,9 +121,7 @@
 }
 
 /* Adjustments for the main-header */
-.main-header {
-  padding: 10px;
-}
+
 .icons img,
 .icons2 img {
   width: 30px; /* Set the same width for all icons */

@@ -5,52 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Page</title>
     <link rel="stylesheet" href="lib/css/donate_add_page.css" />
+    <style>
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 300px;
+        width: 80%;
+      }
+      .modal img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <header>
-    <div class="main-header">
-      <div class="samll-header">
-        <div class="menu-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+  <body>
+    <header>
+      <div class="main-header">
+        <div class="small-header">
+          <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
 
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            gap: 10px;
-          "
-        >
-          <img src="images/icons/logo.png" alt="Logo" style="width: 8%" />
-          <div>
-            <h1 style="font-size: 23px; color: #fff">
-              Radhabai Hardikar Pranijat Mangal Sanstha
-            </h1>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: start;
+              gap: 10px;
+            "
+          >
+            <img src="images/icons/logo.png" alt="Logo" style="width: 8%" />
+            <div>
+              <h1 style="font-size: 23px; color: #fff">
+                Radhabai Hardikar Pranijat Mangal Sanstha
+              </h1>
+            </div>
+          </div>
+
+          <div class="nav-1">
+            <a href="index.html" class="add-nav-bar">Home</a>
+          </div>
+          <div class="nav-1">
+            <a href="donate.html" class="add-nav-bar active">Donate</a>
+          </div>
+          <div class="nav-1">
+            <a href="contact.html" class="add-nav-bar">Contact</a>
+          </div>
+          <div class="nav-1">
+            <a href="trustees.html" class="add-nav-bar">Trustees</a>
+          </div>
+          <div class="nav-1">
+            <a href="gallery.html" class="add-nav-bar">Gallery</a>
+          </div>
+          <div class="nav-1">
+            <a href="awards.html" class="add-nav-bar">Awards</a>
           </div>
         </div>
-
-        <div class="nav-1">
-          <a href="index.html" class="add-nav-bar">Home</a>
-        </div>
-        <div class="nav-1">
-          <a href="donate.html" class="add-nav-bar active">Donate</a>
-        </div>
-        <div class="nav-1">
-          <a href="contact.html" class="add-nav-bar">Contact</a>
-        </div>
-        <div class="nav-1">
-          <a href="trustees.html" class="add-nav-bar">Trustees</a>
-        </div>
-        <div class="nav-1">
-          <a href="gallery.html" class="add-nav-bar">Gallery</a>
-        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <body>
     <div class="main-third">
       <div class="child-third">
         <div class="one-box">
@@ -75,8 +112,12 @@
           <b>IFSC Code:</b>
           <p>VSBL 0000004</p>
         </div>
+
         <div class="third-box">
-          <form id="donationForm" onsubmit="submitForm(event)">
+          <form
+            id="donationForm"
+            onsubmit="event.preventDefault(); processPayment();"
+          >
             <label for="name">Full Name of Donor:</label>
             <input
               type="text"
@@ -104,19 +145,10 @@
               required
             />
 
-            <label for="pan">PAN Number:</label>
-            <input
-              type="text"
-              id="pan"
-              name="pan"
-              placeholder="Enter PAN Number"
-              required
-            />
-
             <label for="birthdate">Birthdate:</label>
             <input type="date" id="birthdate" name="birthdate" required />
 
-            <label for="email">Email id:</label>
+            <label for="email">Email ID:</label>
             <input
               type="email"
               id="email"
@@ -125,27 +157,99 @@
               required
             />
 
-            <label for="payment-method">Please transfer this data to:</label>
-            <select id="payment-method" name="payment-method" required>
-              <option value="whatsapp">WhatsApp number: 9579085270</option>
-              <option value="email">Email: balwansumati@gmail.com</option>
+            <label for="country">Country:</label>
+            <select
+              id="country"
+              name="country"
+              onchange="toggleIdInput()"
+              required
+            >
+              <option value="India">India</option>
+              <option value="US">United States</option>
+              <option value="Canada">Canada</option>
+              <!-- Add more country options as needed -->
             </select>
 
-            <button type="submit">Submit</button>
+            <label for="id-type" id="id-label">PAN Number:</label>
+            <input
+              type="text"
+              id="id-type"
+              name="id-type"
+              placeholder="Enter PAN Number"
+              required
+            />
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+              <option value="scanner">Scanner</option>
+              <option value="gpay">GPay</option>
+              <option value="visa">Visa</option>
+            </select>
+
+            <button type="button" onclick="processPayment()">Pay</button>
           </form>
         </div>
       </div>
     </div>
 
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navItems = document.querySelectorAll(".nav-1");
+    <!-- Modal for Scanner Payment -->
+    <div id="scannerModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Scan to Pay</h3>
+        <img src="images/new scanner.png" alt="Scanner for Payment" />
+        <p>Use a scanner to complete your payment.</p>
+      </div>
+    </div>
 
-      menuToggle.addEventListener("click", () => {
-        navItems.forEach((item) => {
-          item.classList.toggle("show");
-        });
-      });
+    <script>
+      function toggleIdInput() {
+        const country = document.getElementById("country").value;
+        const idLabel = document.getElementById("id-label");
+        const idInput = document.getElementById("id-type");
+
+        if (country === "India") {
+          idLabel.textContent = "PAN Number:";
+          idInput.placeholder = "Enter PAN Number";
+        } else {
+          idLabel.textContent = "Passport Number:";
+          idInput.placeholder = "Enter Passport Number";
+        }
+      }
+
+      function processPayment() {
+        const paymentMethod = document.getElementById("payment-method").value;
+
+        if (paymentMethod === "scanner") {
+          showModal();
+        } else if (paymentMethod === "gpay") {
+          window.location.href = "https://pay.google.com/gp/p/ui/pay";
+        } else if (paymentMethod === "visa") {
+          window.location.href = "https://www.visa.com/pay";
+        } else {
+          alert("Please select a valid payment method.");
+        }
+      }
+
+      function showModal() {
+        document.getElementById("scannerModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("scannerModal").style.display = "none";
+      }
+
+      // Close modal when clicking outside of it
+      window.onclick = function (event) {
+        const modal = document.getElementById("scannerModal");
+        if (event.target === modal) {
+          closeModal();
+        }
+      };
+
+      document
+        .getElementById("country")
+        .addEventListener("change", toggleIdInput);
     </script>
   </body>
 </html>
