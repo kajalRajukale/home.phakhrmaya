@@ -167,13 +167,10 @@ select:not(:placeholder-shown)::placeholder {
   transition: all 0.3s ease;
 }
 .add-nav-bar:hover {
-  color: #000;
-  border-bottom: 2px solid #ffcc00
+  border-bottom: 2px solid #ffcc00;
 }
-
 .add-nav-bar.active {
-  color: #000;
-  border-bottom: 2px solid #ffcc00
+  border-bottom: 2px solid #ffcc00;
 }
 
 /* Menu Toggle Styles */
