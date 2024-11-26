@@ -6,470 +6,493 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Your Foundation</title>
   <link rel="stylesheet" href="stylesP.css">
-</head>
 
-<style>
-  .mian-about {
-    width: 100%;
-    background-color: #fffdfd;
-  }
+  <style>
+    .mian-about {
+      width: 100%;
+      background-color: #fffdfd;
+    }
 
-  .chid-about {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-  }
+    .chid-about {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 10px;
+    }
 
-  .one-about {
-    width: 70%;
-  }
+    .one-about {
+      width: 70%;
+    }
 
-  .two-about {
-    width: 30%;
-    position: relative;
-  }
+    .two-about {
+      width: 30%;
+      position: relative;
+    }
 
-  .img-ab {
-    height: 392px;
-    width: 509px;
-    margin-top: 69px;
-    margin-left: 27px;
-    border: 5px solid;
-  }
+    .img-ab {
+      height: 392px;
+      width: 509px;
+      margin-top: 69px;
+      margin-left: 27px;
+      border: 5px solid;
+    }
 
-  .logo {
-    display: flex;
-    align-items: center;
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-  .logo img {
-    height: 50px;
-  }
+    .logo img {
+      height: 50px;
+    }
 
-  .logo h1 {
-    margin: 0 10px;
-    font-size: 24px;
-    font-weight: bold;
-  }
+    .logo h1 {
+      margin: 0 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-  .pofit-p {
-    font-size: 21px;
-    background: linear-gradient(59deg, #70e1f5, #ffd194, transparent);
+    .pofit-p {
+      font-size: 21px;
+      background: linear-gradient(59deg, #70e1f5, #ffd194, transparent);
 
-    /* background: rgb(48 96 3); */
-    color: #070738;
-    padding: 20px;
-    border-radius: 20px 0px 20px 0px;
-    margin-top: 11px;
-    margin-right: 20px;
-    line-height: 36px;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .main-positon {
-    position: relative;
-  }
-
-  .child-positon {
-    position: absolute;
-    top: 90px;
-  }
-
-  .cir-img {
-    height: 339px;
-    width: 339px;
-    border-radius: 50%;
-    border: 5px solid black;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  }
-
-  .m-top {
-    /* margin-top: -24px; */
-    margin-bottom: 20px;
-  }
-
-  .header-ab {
-    /* background: linear-gradient(59deg, #d9d168, transparent); */
-    /* background: linear-gradient(59deg, #EECDA3, #EF629F, transparent); */
-    background: #ff6600;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .read-more {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fff;
-    background: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  .read-more:hover {
-    background: #020641;
-  }
-
-  /* Member box styling */
-  .member-box {
-    background-color: #fff;
-    /* White background for each box */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    flex-basis: calc(33.333% - 40px);
-    /* Three boxes per row with space between */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth hover effects */
-  }
-
-  .member-box:hover {
-    transform: translateY(-10px);
-    /* Lift up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Deeper shadow on hover */
-  }
-
-  /* Image styling */
-  .member-box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    /* Circular image */
-    margin-bottom: 20px;
-  }
-
-  /* Member name styling */
-  .member-box h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ff6600;
-    /* Accent color for member name */
-  }
-
-  /* Member title styling */
-  .member-box h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #777;
-    /* Subdued color for titles */
-  }
-
-  /* Description styling */
-  .member-box p {
-    font-size: 1em;
-    color: #555;
-    /* Mid-tone color for descriptions */
-    line-height: 1.5em;
-  }
-
-  .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allows items to wrap to the next line */
-    justify-content: space-around;
-    /* Spreads out items with space in between */
-    gap: 20px;
-    /* Space between member boxes */
-  }
-
-  .pakhrmaya-text {
-    font-size: 3em;
-    /* Increase font size */
-    font-weight: bold;
-    /* Make the text bold */
-    color: #f27121;
-    /* Set text color to an accent color */
-    text-align: center;
-    /* Center-align the text */
-    text-shadow: 2px 2px 4px rgba(59, 61, 199, 0.3);
-    /* Add a subtle shadow */
-    margin: 20px 0;
-    /* Add some margin above and below */
-    font-family: 'Arial', sans-serif;
-    /* Set a clean, readable font */
-    letter-spacing: 2px;
-    /* Increase spacing between letters */
-  }
-
-  /* add css */
-
-  /* Base styles for mobile-first approach */
-  body {
-    font-size: 16px;
-    /* Base font size */
-  }
-
-  .header-container {
-    padding: 10px;
-  }
-
-  .logo-heading {
-    flex-direction: column;
-    /* Stack logo and heading vertically on smaller screens */
-  }
-
-  .dynamic-heading {
-    font-size: 1.5em;
-    /* Smaller font size on mobile */
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    /* Stack navbar items vertically on smaller screens */
-    gap: 10px;
-  }
-
-  .navbar ul li a {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
-
-  .container {
-    flex-direction: column;
-    /* Stack marquee containers vertically on smaller screens */
-    gap: 20px;
-  }
-
-  .marquee-container {
-    width: 100%;
-    height: 50vh;
-    /* Adjust height to be responsive */
-  }
-
-  .marquee img {
-    width: 100%;
-    height: auto;
-    /* Maintain aspect ratio */
-  }
-
-  /* Media Queries for Larger Screens */
-  @media(min-width: 768px) {
-    .header-container {
+      /* background: rgb(48 96 3); */
+      color: #070738;
       padding: 20px;
+      border-radius: 20px 0px 20px 0px;
+      margin-top: 11px;
+      margin-right: 20px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .main-positon {
+      position: relative;
+    }
+
+    .child-positon {
+      position: absolute;
+      top: 90px;
+    }
+
+    .cir-img {
+      height: 339px;
+      width: 339px;
+      border-radius: 50%;
+      border: 5px solid black;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    }
+
+    .m-top {
+      /* margin-top: -24px; */
+      margin-bottom: 20px;
+    }
+
+    .header-ab {
+      /* background: linear-gradient(59deg, #d9d168, transparent); */
+      /* background: linear-gradient(59deg, #EECDA3, #EF629F, transparent); */
+      background: #ff6600;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more:hover {
+      background: #020641;
+    }
+
+    /* Member box styling */
+    .member-box {
+      background-color: #fff;
+      /* White background for each box */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow for depth */
+      flex-basis: calc(33.333% - 40px);
+      /* Three boxes per row with space between */
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* Smooth hover effects */
+    }
+
+    .member-box:hover {
+      transform: translateY(-10px);
+      /* Lift up on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      /* Deeper shadow on hover */
+    }
+
+    /* Image styling */
+    .member-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      /* Circular image */
+      margin-bottom: 20px;
+    }
+
+    /* Member name styling */
+    .member-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #ff6600;
+      /* Accent color for member name */
+    }
+
+    /* Member title styling */
+    .member-box h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #777;
+      /* Subdued color for titles */
+    }
+
+    /* Description styling */
+    .member-box p {
+      font-size: 1em;
+      color: #555;
+      /* Mid-tone color for descriptions */
+      line-height: 1.5em;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allows items to wrap to the next line */
+      justify-content: space-around;
+      /* Spreads out items with space in between */
+      gap: 20px;
+      /* Space between member boxes */
+    }
+
+    .pakhrmaya-text {
+      font-size: 3em;
+      /* Increase font size */
+      font-weight: bold;
+      /* Make the text bold */
+      color: #f27121;
+      /* Set text color to an accent color */
+      text-align: center;
+      /* Center-align the text */
+      text-shadow: 2px 2px 4px rgba(59, 61, 199, 0.3);
+      /* Add a subtle shadow */
+      margin: 20px 0;
+      /* Add some margin above and below */
+      font-family: "Arial", sans-serif;
+      /* Set a clean, readable font */
+      letter-spacing: 2px;
+      /* Increase spacing between letters */
+    }
+
+    /* add css */
+
+    /* Base styles for mobile-first approach */
+    body {
+      font-size: 16px;
+      /* Base font size */
+    }
+
+    .header-container {
+      padding: 10px;
     }
 
     .logo-heading {
-      flex-direction: row;
-      /* Align logo and heading horizontally on larger screens */
+      flex-direction: column;
+      /* Stack logo and heading vertically on smaller screens */
     }
 
     .dynamic-heading {
-      font-size: 2em;
+      font-size: 1.5em;
+      /* Smaller font size on mobile */
     }
 
     .navbar ul {
-      flex-direction: row;
-      gap: 30px;
+      flex-direction: column;
+      /* Stack navbar items vertically on smaller screens */
+      gap: 10px;
     }
 
     .navbar ul li a {
-      font-size: 1.2em;
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+
+    .container {
+      flex-direction: column;
+      /* Stack marquee containers vertically on smaller screens */
+      gap: 20px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      height: 50vh;
+      /* Adjust height to be responsive */
+    }
+
+    .marquee img {
+      width: 100%;
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    /* Media Queries for Larger Screens */
+    @media (min-width: 768px) {
+      .header-container {
+        padding: 20px;
+      }
+
+      .logo-heading {
+        flex-direction: row;
+        /* Align logo and heading horizontally on larger screens */
+      }
+
+      .dynamic-heading {
+        font-size: 2em;
+      }
+
+      .navbar ul {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .navbar ul li a {
+        font-size: 1.2em;
+        padding: 10px 20px;
+      }
+
+      .container {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .marquee-container {
+        width: 50%;
+        height: 70vh;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .header-container {
+        padding: 30px;
+      }
+
+      .dynamic-heading {
+        font-size: 2.5em;
+      }
+
+      .navbar ul {
+        gap: 40px;
+      }
+
+      .navbar ul li a {
+        font-size: 1.4em;
+      }
+
+      .container {
+        gap: 40px;
+      }
+
+      .marquee-container {
+        width: 50%;
+        height: 70vh;
+      }
+    }
+
+    /* add stroy css */
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 32px;
+      color: #333;
+    }
+
+    .main-parent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 300px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      position: relative;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, #70e1f5, #ffd194, transparent);
+
+      /* background: linear-gradient(45deg, #0099f7, #f11712); */
+      z-index: -1;
+      transition: transform 0.5s ease;
+      transform: scale(0);
+    }
+
+    .card::before {
+      transform-origin: top left;
+    }
+
+    .card::after {
+      transform-origin: bottom right;
+    }
+
+    .card:hover::before {
+      transform: scale(1);
+    }
+
+    .card:hover::after {
+      transform: scale(1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      color: #555;
+      font-size: 20px;
+    }
+
+    .card p {
+      padding: 0 15px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .card button {
       padding: 10px 20px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #0099f7;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    .container {
-      flex-direction: row;
-      gap: 30px;
+    .card button:hover {
+      background-color: #007acc;
     }
 
-    .marquee-container {
-      width: 50%;
-      height: 70vh;
+    .card a {
+      color: #fff;
+      text-decoration: none;
     }
-  }
-
-  @media(min-width: 1200px) {
-    .header-container {
-      padding: 30px;
-    }
-
-    .dynamic-heading {
-      font-size: 2.5em;
-    }
-
-    .navbar ul {
-      gap: 40px;
-    }
-
-    .navbar ul li a {
-      font-size: 1.4em;
-    }
-
-    .container {
-      gap: 40px;
-    }
-
-    .marquee-container {
-      width: 50%;
-      height: 70vh;
-    }
-  }
-
-
-
-  /* add stroy css */
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 32px;
-    color: #333;
-  }
-
-  .main-parent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .card {
-    background-color: #fff;
-    width: 300px;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-align: center;
-    position: relative;
-  }
-
-  .card::before,
-  .card::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #70e1f5, #ffd194, transparent);
-
-    /* background: linear-gradient(45deg, #0099f7, #f11712); */
-    z-index: -1;
-    transition: transform 0.5s ease;
-    transform: scale(0);
-  }
-
-  .card::before {
-    transform-origin: top left;
-  }
-
-  .card::after {
-    transform-origin: bottom right;
-  }
-
-  .card:hover::before {
-    transform: scale(1);
-  }
-
-  .card:hover::after {
-    transform: scale(1);
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-  }
-
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .card h2 {
-    margin: 10px 0;
-    color: #555;
-    font-size: 20px;
-  }
-
-  .card p {
-    padding: 0 15px;
-    color: #777;
-    font-size: 14px;
-  }
-
-  .card button {
-    padding: 10px 20px;
-    margin: 15px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #0099f7;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .card button:hover {
-    background-color: #007acc;
-  }
-
-  .card a {
-    color: #fff;
-    text-decoration: none;
-  }
-</style>
+  </style>
+</head>
 
 <body>
   <div class="container">
     <div class="header">
       <div class="logo">
-        <img src="images/icons/bird-removebg-preview.png">
-        <h2 class="pakhrmaya-text">Pakharmaya</h2><img src="images/icons/bird-removebg-preview.png">
+        <img src="images/icons/bird-removebg-preview.png" />
+        <h2 class="pakhrmaya-text">Pakharmaya</h2>
+        <img src="images/icons/bird-removebg-preview.png" />
       </div>
       <!-- <a href="story.html"><marquee><h2 >Read our Children's Success Story</h2></marquee></a> -->
     </div>
     <div class="mian-about">
       <div class="chid-about">
-
         <div class="one-about">
           <h1 class="header-ab">ABOUT US</h1>
           <p class="pofit-p">
-            <b class="bold">Dr. (Mrs.) Sharayu Ghole,</b> a dedicated gynecologist, has been running a hospital in<br>
-            Dhankawadi, Pune, since 1977. Inspired by the teachings of Swami Vivekananda<br>
-            and driven by a deep sense of gratitude to society, Dr. Ghole, along with<br>
-            Dr. M.N. Hardikar and other like-minded individuals, came together with a vision <br>
-            to make a meaningful contribution to society. <br><br>
-            This collective effort led to the establishment of the "Radhabai Hardikar Pranijat <br>
-            Mangal Sanstha" Trust. The journey began modestly over 30 years ago with the <br>
-            opening of a small dispensary and hospital in Nimbalkarwadi-Gujarwadi, then<br>
-            small hamlets under Katraj Gram Panchayat. The location was chosen due to the<br>
-            lack of medical facilities and the absence of public transport, addressing a critical<br><br>
-            Need in the community. Encouraged by the success of these initiatives, the Trust <br>
-            took a further step in 1999 by founding an orphanage with a difference. Unlike <br>
-            traditional institutions, this orphanage is designed to provide a true "Home"<br>
-            for the 25 children who live there, ensuring they grow up in a nurturing and <br>
-            supportive environment. To provide these children, and others from nearby<br><br>
-            villages, with a quality education, the Trust established a charitable school,<br>
-            “Sumati Balwan,” in 2001. This school, which currently educates 650 students<br>
-            from Kindergarten to 10th grade, offers a unique learning experience. The <br>
-            focus is on holistic education, where children learn amidst nature,<br><br>
-            Through play, dance, singing, and by discovering and nurturing their innate <br>
-            talents. Additionally, to equip students with practical skills, the school<br>
-            introduced the Introduction to Basic Technology (IBT) program for <br>students from 8th to 10th grade,<br>
-            fostering independence and <br>self-sufficiency.
-
-
+            <b class="bold">Dr. (Mrs.) Sharayu Ghole,</b> a dedicated
+            gynecologist, has been running a hospital in<br />
+            Dhankawadi, Pune, since 1977. Inspired by the teachings of Swami
+            Vivekananda<br />
+            and driven by a deep sense of gratitude to society, Dr. Ghole,
+            along with<br />
+            Dr. M.N. Hardikar and other like-minded individuals, came together
+            with a vision <br />
+            to make a meaningful contribution to society. <br /><br />
+            This collective effort led to the establishment of the "Radhabai
+            Hardikar Pranijat <br />
+            Mangal Sanstha" Trust. The journey began modestly over 30 years
+            ago with the <br />
+            opening of a small dispensary and hospital in
+            Nimbalkarwadi-Gujarwadi, then<br />
+            small hamlets under Katraj Gram Panchayat. The location was chosen
+            due to the<br />
+            lack of medical facilities and the absence of public transport,
+            addressing a critical<br /><br />
+            Need in the community. Encouraged by the success of these
+            initiatives, the Trust <br />
+            took a further step in 1999 by founding an orphanage with a
+            difference. Unlike <br />
+            traditional institutions, this orphanage is designed to provide a
+            true "Home"<br />
+            for the 25 children who live there, ensuring they grow up in a
+            nurturing and <br />
+            supportive environment. To provide these children, and others from
+            nearby<br /><br />
+            villages, with a quality education, the Trust established a
+            charitable school,<br />
+            “Sumati Balwan,” in 2001. This school, which currently educates
+            650 students<br />
+            from Kindergarten to 10th grade, offers a unique learning
+            experience. The <br />
+            focus is on holistic education, where children learn amidst
+            nature,<br /><br />
+            Through play, dance, singing, and by discovering and nurturing
+            their innate <br />
+            talents. Additionally, to equip students with practical skills,
+            the school<br />
+            introduced the Introduction to Basic Technology (IBT) program for
+            <br />students from 8th to 10th grade,<br />
+            fostering independence and <br />self-sufficiency.
           </p>
         </div>
 
         <div class="two-about">
           <div class="main-positon">
             <div class="child-position">
-              <div class="m-top"><img class="cir-img" src="images/gallery/p8.jpg"></div>
+              <div class="m-top">
+                <img class="cir-img" src="images/gallery/p8.jpg" alt="">
+              </div>
             </div>
             <div class="child-position">
-              <div class="m-top-1"><img class="cir-img" src="images/gallery/p3.jpg"></div>
+              <div class="m-top-1">
+                <img class="cir-img" src="images/gallery/p3.jpg" />
+              </div>
             </div>
             <div class="child-position">
-              <div class="m-top-2"><img class="cir-img" src="images/gallery/p5.jpg"></div>
+              <div class="m-top-2">
+                <img class="cir-img" src="images/gallery/p5.jpg" />
+              </div>
             </div>
           </div>
           <!-- <a href="#readmore1" class="read-more">Children's Success Story</a> -->
@@ -480,37 +503,47 @@
 
       <div class="main-parent">
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Sakshi Shinde">
+          <img src="images/third-girl.jpg" alt="Sakshi Shinde" />
           <h2>Sakshi Shinde</h2>
-          <p>An inspiring story of Sakshi who overcame challenges to achieve her dreams.</p>
+          <p>
+            An inspiring story of Sakshi who overcame challenges to achieve
+            her dreams.
+          </p>
           <button><a href="sakshistory.html">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Bhupesh Indulkar">
+          <img src="images/third-girl.jpg" alt="Bhupesh Indulkar" />
           <h2>Bhupesh Indulkar</h2>
-          <p>Discover how Bhupesh achieved excellence through perseverance.</p>
+          <p>
+            Discover how Bhupesh achieved excellence through perseverance.
+          </p>
           <button><a href="bhupeshstory.html">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Shweta Indulkar">
+          <img src="images/third-girl.jpg" alt="Shweta Indulkar" />
           <h2>Shweta Indulkar</h2>
-          <p>Learn about Shweta's journey from humble beginnings to success.</p>
+          <p>
+            Learn about Shweta's journey from humble beginnings to success.
+          </p>
           <button><a href="shwetastory.html">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Raj Shinde">
+          <img src="images/third-girl.jpg" alt="Raj Shinde" />
           <h2>Raj Shinde</h2>
           <p>Raj's incredible story of determination and hard work.</p>
           <button><a href="#">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Kajal Kale">
+          <img src="images/third-girl.jpg" alt="Kajal Kale" />
           <h2>Kajal Kale</h2>
-          <p>Follow Kajal's inspiring story to reach her goals against all odds.</p>
+          <p>
+            Follow Kajal's inspiring story to reach her goals against all
+            odds.
+          </p>
           <button><a href="kajalStory.html">Learn More</a></button>
         </div>
 
@@ -524,28 +557,31 @@
         <div class="card">
           <img src="images/third-girl.jpg" alt="Vishal More">
           <h2>Vishal More</h2>
-          <p>An inspiring story of Vishal, who turned his dreams into reality.</p>
+          <p>
+            An inspiring story of Vishal, who turned his dreams into reality.
+          </p>
           <button><a href="#">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Jyoti Pathde">
+          <img src="images/third-girl.jpg" alt="Jyoti Pathde" />
           <h2>Jyoti Pathde</h2>
           <p>Jyoti's story is a testament to resilience and dedication.</p>
           <button><a href="joytistroy.html">Learn More</a></button>
         </div>
 
         <div class="card">
-          <img src="images/third-girl.jpg" alt="Rani Pawer">
+          <img src="images/third-girl.jpg" alt="Rani Pawer" />
           <h2>Rani Pawer</h2>
-          <p>Rani's journey showcases courage and a relentless spirit to succeed.</p>
+          <p>
+            Rani's journey showcases courage and a relentless spirit to
+            succeed.
+          </p>
           <button><a href="ranistory.html">Learn More</a></button>
         </div>
       </div>
-
-
-
     </div>
+  </div>
 </body>
 
 </html>
