@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Lights</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .hero-banner {
+        background: url("hero-banner.jpg") center center/cover no-repeat;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-banner h1 {
+        font-size: 4em;
+        margin: 0;
+      }
+
+      .hero-banner p {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+
+      .cta-button {
+        background-color: #ff7e5f;
+        padding: 15px 30px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+      }
+
+      .product-grid,
+      .services-grid {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+
+      .product,
+      .service {
+        text-align: center;
+        width: 30%;
+      }
+
+      .whatsapp-button {
+        background-color: #25d366;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero-banner">
+      <h1>Galaxy Lights</h1>
+      <p>Your one-stop solution for all lighting needs</p>
+      <a href="#contact" class="cta-button">Contact Us</a>
+    </header>
+
+    <section id="products">
+      <h2>Explore Our Products</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="ceiling-lights.jpg" alt="Ceiling Lights" />
+          <h3>Ceiling Lights</h3>
+        </div>
+        <div class="product">
+          <img src="decorative-lights.jpg" alt="Decorative Lights" />
+          <h3>Decorative Lights</h3>
+        </div>
+        <div class="product">
+          <img src="outdoor-lights.jpg" alt="Outdoor Lights" />
+          <h3>Outdoor Lights</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Lighting Installation</h3>
+          <p>
+            We provide professional lighting installation services for homes and
+            offices.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Lighting Repair</h3>
+          <p>Expert repair services to keep your lights running smoothly.</p>
+        </div>
+        <div class="service">
+          <h3>Customization</h3>
+          <p>Custom lighting designs tailored to your specific needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Reach out to us for inquiries or custom orders</p>
+      <a href="https://wa.me/1234567890" class="whatsapp-button"
+        >Contact Us on WhatsApp</a
+      >
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Galaxy Lights | Designed for Excellence</p>
+    </footer>
+  </body>
+</html>

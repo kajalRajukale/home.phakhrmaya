@@ -1,0 +1,183 @@
+.gallery {
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding: 7px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2em;
+  position: relative;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Flexbox layout for the gallery */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Individual gallery item */
+.gallery-item {
+  flex: 1 1 calc(33.33% - 20px);
+  /* Three equal-width columns with spacing */
+  max-width: calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on gallery item */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px);
+    /* Two equal-width columns on tablets */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%;
+    /* Full width on smaller screens */
+    max-width: 100%;
+  }
+}
+
+/* Header styling */
+
+.small-header {
+  display: flex;
+  justify-content: center;
+  /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  border-bottom: 2px solid #ffcc00;
+}
+
+.add-nav-bar.active {
+  color: black;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none;
+  /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.icons img,
+.icons2 img {
+  width: 30px;
+  /* Set the same width for all icons */
+  height: 30px;
+  /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  /* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2);
+  /* Scale effect on hover */
+}
+
+.icons2 {
+  display: flex;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .small-header {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-start;
+    /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none;
+    /* Hide nav items by default */
+    width: 100%;
+    /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex;
+    color: black;
+  }
+
+  .nav-1.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
