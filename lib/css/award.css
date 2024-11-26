@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #444;
+}
+
+.awards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.award-card {
+  position: relative;
+  width: 235px;
+  height: 364px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.award-card:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 150, 255, 0.4);
+}
+
+.award-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.award-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.award-card:hover .award-caption {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Header styling */
+
+.small-header {
+  display: flex;
+  justify-content: center; /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  color: #000;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.add-nav-bar.active {
+  color: #000;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Adjustments for the main-header */
+.main-header {
+  padding: 8px;
+}
+.icons img,
+.icons2 img {
+  width: 30px; /* Set the same width for all icons */
+  height: 30px; /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.icons2 {
+  display: flex;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .small-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none; /* Hide nav items by default */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex; /* Show active item */
+  }
+
+  .nav-1.show {
+    display: flex; /* Show all items when menu is active */
+    flex-direction: column; /* Stack items */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle */
+  }
+}

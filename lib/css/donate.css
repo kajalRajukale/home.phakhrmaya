@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #fff;
+	/* Ensure background is white */
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 0 auto;
+	background: #fff;
+	/* Ensure white background for this container */
+	width: fit-content;
+}
+
+/* Child containers */
+.child {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+	margin: 20px 0;
+	background: #fff;
+	/* Keep background white for child container */
+}
+
+b {
+	color: #0049f3bb;
+}
+
+.donate {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	background: #007bff;
+	padding: 12px 24px;
+	border-radius: 8px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.donate:hover {
+	background: #0056b3;
+	transform: translateY(-3px);
+}
+
+.div-img-donate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.donat-img {
+	height: 305px;
+	border-radius: 15px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donation-box {
+	width: 100%;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	box-sizing: border-box;
+
+	.form-group {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 15px;
+	}
+
+	.form-group label {
+		flex: 1;
+		text-align: right;
+		margin-right: 10px;
+	}
+
+	.form-group input,
+	.form-group select {
+		flex: 2;
+	}
+
+	.form-inline {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.form-inline input,
+	.form-inline select {
+		flex: 1;
+	}
+
+	#convertedAmount {
+		margin-top: 10px;
+		font-style: italic;
+	}
+
+	button {
+		margin-top: 15px;
+	}
+
+
+
+
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	label {
+		margin-top: 5px;
+		font-weight: bold;
+		color: #333;
+	}
+
+	input,
+	select {
+		margin-top: 5px;
+		padding: 5px;
+		font-size: 16px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	button {
+		margin-top: 20px;
+		padding: 10px;
+		background-color: #007bff;
+		color: white;
+		font-size: 18px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	button:hover {
+		background-color: #0056b3;
+	}
+
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+	.child-founder {
+		flex-direction: row;
+		/* Display content side-by-side in desktop view */
+		justify-content: space-between;
+	}
+
+	.one-section,
+	.two-section {
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 767px) {
+	.child-founder {
+		flex-direction: column;
+		/* Stack elements vertically on mobile */
+	}
+
+	.donate-h1 {
+		font-size: 36px;
+	}
+
+	.donate-para {
+		font-size: 16px;
+	}
+
+	.read-more {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+
+	.donat-img {
+		margin-left: 0;
+		width: 100%;
+		/* Ensure the image takes full width in mobile */
+		height: auto;
+		/* Adjust the height for responsive behavior */
+	}
+}
+
+/* Header styling */
+.small-header {
+	display: flex;
+	justify-content: center;
+	/* Adjusted for mobile */
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	font-weight: 900;
+	background-color: #1d932d;
+	font-family: Arial, sans-serif;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-nav-bar {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	padding: 10px;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+	border-bottom: 2px solid #ffcc00;
+}
+
+.add-nav-bar.active {
+	color: black;
+	border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+	display: none;
+	/* Hidden by default */
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.bar {
+	height: 3px;
+	width: 25px;
+	background-color: white;
+	margin: 3px 0;
+	transition: 0.3s;
+}
+
+/* Adjustments for the main-header */
+.main-header {
+	padding: 10px;
+}
+
+.icons img,
+.icons2 img {
+	width: 30px;
+	/* Set the same width for all icons */
+	height: 30px;
+	/* Set the same height for all icons */
+	margin-left: 10px;
+	transition: transform 0.3s ease;
+	/* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+	transform: scale(1.2);
+	/* Scale effect on hover */
+}
+
+.icons2 {
+	display: flex;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+	.small-header {
+		flex-direction: column;
+		/* Stack items vertically */
+		align-items: flex-start;
+		/* Align items to start */
+	}
+
+	.nav-1 {
+		display: none;
+		/* Hide nav items by default */
+		width: 100%;
+		/* Full width for mobile */
+	}
+
+	.nav-1.active {
+		display: flex;
+		/* Show active item */
+	}
+
+	.nav-1.show {
+		display: flex;
+		/* Show all items when menu is active */
+		flex-direction: column;
+		/* Stack items */
+	}
+
+	.menu-toggle {
+		display: flex;
+		/* Show menu toggle */
+	}
+}

@@ -1,0 +1,736 @@
+.child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.one-about {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+}
+
+.header-ab {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.pofit-p {
+  font-size: 16px;
+  color: #555;
+  font-family: sans-serif;
+}
+
+.bold {
+  color: #333;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 0px 0;
+}
+
+b {
+  font-weight: 600;
+  color: #333;
+}
+
+.two-about {
+  width: 30%;
+  position: relative;
+}
+
+.img-ab {
+  height: 392px;
+  width: 100%;
+  margin-top: 69px;
+  margin-left: 0;
+  border: 5px solid;
+}
+
+.new {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4caf50; /* Success color */
+  text-align: center;
+  margin: 40px 0 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.new:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #4caf50;
+  margin: 10px auto 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo h2 {
+  margin: 0 10px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.block {
+  font-size: 21px;
+  color: #070738;
+  padding: 14px;
+  line-height: 36px;
+
+}
+
+.main-positon {
+  position: relative;
+}
+
+.child-position {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cir-img {
+  height: 339px;
+  width: 100%;
+  max-width: 339px;
+  border-radius: 99px 0px 99px 0px;
+  border: 5px solid black;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+}
+
+.m-top {
+  margin-bottom: 20px;
+}
+
+.header-ab {
+  background: #ff6600;
+  color: #fff;
+  padding: 6px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 8px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background: #020641;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .chid-about {
+    /* flex-direction: column; */
+    /* Stack elements vertically on small screens */
+    align-items: center;
+  }
+
+  .one-about,
+  .two-about {
+    width: 100%;
+    /* Take full width on small screens */
+  }
+
+  .pofit-p {
+    font-size: 18px;
+    padding: 15px;
+    line-height: 28px;
+  }
+
+  .cir-img {
+    height: auto;
+    width: 90%;
+    /* Reduce image size */
+  }
+
+  .logo h2 {
+    font-size: 20px;
+    /* Smaller font for logo text */
+  }
+}
+
+@media (max-width: 480px) {
+  .pofit-p {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 24px;
+  }
+
+  .cir-img {
+    width: 100%;
+    height: auto;
+    /* Scale images down more */
+  }
+
+  .logo img {
+    height: 40px;
+    /* Smaller logo */
+  }
+
+  .logo h2 {
+    font-size: 18px;
+    /* Adjust logo text */
+  }
+}
+
+/* Member box styling */
+.member-box {
+  background-color: #fff;
+  /* White background for each box */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  flex-basis: calc(33.333% - 40px);
+  /* Three boxes per row with space between */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effects */
+}
+
+.member-box:hover {
+  transform: translateY(-10px);
+  /* Lift up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Deeper shadow on hover */
+}
+
+/* Image styling */
+.member-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  /* Circular image */
+  margin-bottom: 20px;
+}
+
+/* Member name styling */
+.member-box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ff6600;
+  /* Accent color for member name */
+}
+
+/* Member title styling */
+.member-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #777;
+  /* Subdued color for titles */
+}
+
+/* Description styling */
+.member-box p {
+  font-size: 1em;
+  color: #555;
+  /* Mid-tone color for descriptions */
+  line-height: 1.5em;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows items to wrap to the next line */
+  justify-content: space-around;
+  /* Spreads out items with space in between */
+  gap: 20px;
+  /* Space between member boxes */
+}
+
+.pakhrmaya-text {
+  font-size: 3em;
+  /* Increase font size */
+  font-weight: bold;
+  /* Make the text bold */
+  color: #070738;
+  /* Set text color to an accent color */
+  text-align: center;
+  /* Center-align the text */
+  text-shadow: 2px 2px 4px rgba(59, 61, 199, 0.3);
+  /* Add a subtle shadow */
+  margin: 20px 0;
+  /* Add some margin above and below */
+  font-family: "Arial", sans-serif;
+  /* Set a clean, readable font */
+  letter-spacing: 2px;
+  /* Increase spacing between letters */
+}
+
+/* add css */
+
+/* Base styles for mobile-first approach */
+body {
+  font-size: 16px;
+  /* Base font size */
+}
+
+.header-container {
+  padding: 10px;
+}
+
+.logo-heading {
+  flex-direction: column;
+  /* Stack logo and heading vertically on smaller screens */
+}
+
+.dynamic-heading {
+  font-size: 1.5em;
+  /* Smaller font size on mobile */
+}
+
+.navbar ul {
+  flex-direction: column;
+  /* Stack navbar items vertically on smaller screens */
+  gap: 10px;
+}
+
+.navbar ul li a {
+  font-size: 1em;
+  padding: 8px 16px;
+}
+
+.container {
+  flex-direction: column;
+  /* Stack marquee containers vertically on smaller screens */
+  gap: 20px;
+}
+
+.marquee-container {
+  width: 100%;
+  height: 50vh;
+  /* Adjust height to be responsive */
+}
+.f-head {
+  font-size: 25px;
+  color: #fff;
+}
+
+.marquee img {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* add stroy css */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+  color: #333;
+}
+
+.main-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* .card button:hover {
+  background-color: #45a049;
+} */
+
+.last-word {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Flexbox for centering the last-word */
+.main-parent div:last-child {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #70e1f5, #ffd194, transparent);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: scale(0);
+}
+
+.card::before {
+  transform-origin: top left;
+}
+
+.card::after {
+  transform-origin: bottom right;
+}
+
+.card:hover::before {
+  transform: scale(1);
+}
+
+.card:hover::after {
+  transform: scale(1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 39%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 13px;
+}
+
+.card h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.card p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 0 15px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+/* 
+.card h2 {
+  margin: 10px 0;
+  color: #555;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 0 15px;
+  color: #777;
+  font-size: 14px;
+} */
+
+.card button {
+  padding: 10px 20px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #0099f7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #007acc;
+}
+
+.card a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .header-container {
+    padding: 20px;
+  }
+
+  .logo-heading {
+    flex-direction: row;
+    /* Align logo and heading horizontally on larger screens */
+  }
+
+  .dynamic-heading {
+    font-size: 2em;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .navbar ul li a {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  .container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .marquee-container {
+    width: 50%;
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-container {
+    padding: 30px;
+  }
+
+  .dynamic-heading {
+    font-size: 2.5em;
+  }
+
+  .navbar ul {
+    gap: 40px;
+  }
+
+  .navbar ul li a {
+    font-size: 1.4em;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .marquee-container {
+    width: 50%;
+    height: 70vh;
+  }
+}
+
+/* add css */
+OBSOLETE_h1 {
+  /* text-align: center; */
+  font-size: 32px;
+  color: #ff6600;
+  /* Updated to match the orange theme */
+  background: linear-gradient(45deg, #70e1f5, #ffd194);
+  /* Gradient background */
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-weight: 900;
+  margin: 0 10px;
+}
+
+.last-word {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+  color: #020641;
+  font-weight: 900;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+  position: relative;
+  border: 2px solid #ff6600;
+  /* Border to match the theme */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border: 2px solid #70e1f5;
+  /* Color change on hover */
+}
+
+.card button {
+  padding: 10px 20px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #f27121;
+  transform: scale(1.05);
+}
+
+.card h2 {
+  color: #f27121;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 39%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Header styling */
+.samll-header {
+  display: flex;
+  justify-content: center; /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  border-bottom: 2px solid #ffcc00;
+}
+.add-nav-bar.active {
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Adjustments for the main-header */
+.main-header {
+  padding: 10px;
+}
+.icons img,
+.icons2 img {
+  width: 30px; /* Set the same width for all icons */
+  height: 30px; /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.icons2 {
+  display: flex;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .samll-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none; /* Hide nav items by default */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex; /* Show active item */
+  }
+
+  .nav-1.show {
+    display: flex; /* Show all items when menu is active */
+    flex-direction: column; /* Stack items */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle */
+  }
+}
+
+/* Existing styles remain unchanged */

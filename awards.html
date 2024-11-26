@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awards of Sumati Balwan</title>
+    <link rel="stylesheet" href="lib/css/global.css" />
+    <link rel="stylesheet" href="lib/css/award.css" />
+  </head>
+  <header>
+    <div class="main-header">
+      <div class="small-header">
+    
+        <div class="menu-toggle" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: start; gap: 10px;">
+          <img src="images/icons/logo.png" alt="Logo" style="width: 8%" />
+          <div>
+            <h1 style="font-size: 23px; color: #fff">
+              Radhabai Hardikar Pranijat Mangal Sanstha
+            </h1>
+          </div>
+        </div>
+
+        <div class="nav-1"><a href="index.html" class="add-nav-bar">Home</a></div>
+        <div class="nav-1"><a href="donation/donate.html" class="add-nav-bar">Donate</a></div>
+        <div class="nav-1"><a href="contact.html" class="add-nav-bar">Contact</a></div>
+        <div class="nav-1"><a href="trustees.html" class="add-nav-bar">Trustees</a></div>
+        <div class="nav-1"><a href="gallery.html" class="add-nav-bar">Gallery</a></div>
+        <div class="nav-1"><a href="awards.html" class="add-nav-bar active">Awards</a></div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <h1 class="header">Awards of Sumati Balwan</h1>
+    
+    <div class="awards-section">
+      <div class="award-card" onclick="openModal('images/award 1.png')">
+        <img src="images/award 1.png" alt="Award 1" />
+        <div class="award-caption">Award 1 Description</div>
+      </div>
+      <div class="award-card" onclick="openModal('images/award 2.png')">
+        <img src="images/award 2.png" alt="Award 2" />
+        <div class="award-caption">Award 2 Description</div>
+      </div>
+      <div class="award-card" onclick="openModal('images/gallery/p30.jpeg')">
+        <img src="images/gallery/p30.jpeg" alt="Award 3" />
+        <div class="award-caption">Award 3 Description</div>
+      </div>
+      <div class="award-card" onclick="openModal('images/gallery/p9.jpg')">
+        <img src="images/gallery/p9.jpg" alt="Award 4" />
+        <div class="award-caption">Award 4 Description</div>
+      </div>
+      <!-- Additional cards can be added similarly -->
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <img id="modalImage" src="" alt="Enlarged Award" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+
+        // Toggle the 'show' class on the sidebar when the hamburger button is clicked
+        hamburger.addEventListener("click", function () {
+          sidebar.classList.toggle("show");
+        });
+      });
+
+      // Function to open modal and display selected image
+      function openModal(imageSrc) {
+        document.getElementById("modalImage").src = imageSrc;
+        document.getElementById("imageModal").style.display = "flex";
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

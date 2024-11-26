@@ -1,104 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header class="header-container">
-        <div class="social-media-icons">
-            <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
-                <img src="images/icons/insta.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/sumatibalwanschool/" target="_blank">
-                <img src="images/icons/facebook.png" alt="Facebook"></a>
-            <a href="https://www.youtube.com/@sharayughole3544/featured" target="_blank">
-                <img src="images/icons/youtube.png" alt="youtube"></a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumari Balwan</title>
+    <link rel="stylesheet" href="lib/css/style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <button class="hamburger" id="hamburger">&#9776;</button>
 
         <div class="logo-heading">
-            <img src="images/icons/ logo.png" alt="Logo" class="logo">
-            <h1 class="dynamic-heading">
-                <span class="text-gradient">Radhabai Hardikar Pranijat Mangel Sanstha</span>
-            </h1>
+          <img src="images/icons/logo.png" alt="Logo" class="logo" />
+          <h1 class="dynamic-heading">
+            <span class="text-gradient">Radhabai Hardikar Pranijat Mangal Sanstha</span>
+          </h1>
         </div>
+        <p class="para-con-p">GUJAR NIMBALKAR WADI,KATRAJ,PUNE. 411046</p>
+      </header>
 
-    </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="donate.html">Donate</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="trustees.html">Trustees</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+      <nav class="sidebar" id="sidebar">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="donation/donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="trustees.html">Trustees</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="awards.html">Awards</a></li>
         </ul>
-    </nav>
-    <div class="main-header">
-        <div class="header-child">
-            <div>
-                <h1 class="styled-text">Sumati Balwan</h1>
-            </div>
-            <div>
-                <h1 class="styled-text">Pakharmaya</h1>
-            </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/sumatibalwan/" target="_blank">
+            <img src="images/icons/insta.png" alt="Instagram" />
+            <span class="tooltip">Follow us</span>
+          </a>
+          <a href="https://www.facebook.com/sumatibalwanschool/" target="_blank">
+            <img src="images/icons/facebook.png" alt="Facebook" />
+            <span class="tooltip">Follow us</span>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=sharayu+ghole" target="_blank">
+            <img src="images/icons/youtube.png" alt="Youtube" />
+            <span class="tooltip">Follow us</span>
+          </a>
         </div>
+      </nav>
+
+      <div class="main-content">
+        <div class="grid-item">
+          <h1 class="text-header">SUMATI BALWAN</h1>
+          <br />
+          <a href="aboutS.html"><img src="images/bulinging-resize.jpg" alt="Sumati Balwan" /></a>
+          <a href="aboutS.html" class="read-more" >Read More</a>
+        </div>
+        <div class="grid-item">
+          <h1 class="text-header">PAKHARMAYA</h1>
+          <br />
+          <a href="aboutP.html"><img src="images/pakhrmaya-resize.jpg" alt="Pakhrmaya" /></a>
+          <a href="aboutP.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- <footer class="footer">Footer Section</footer> -->
     </div>
 
-    <div class="main-bg-img">
-        <div class="child-bg-img">
-            <div class="img-one">
-                <img class="img-con-new" src="images/bulinging-img.jpg">
-                <a href="aboutS.html" class="more-btn"><button class="first-btn">Read More</a>
-            </div>
-            <div class="img-two">
-                <img class="img-con-old" src="images/pakhrmaya-img.jpg">
-                <a href="aboutP.html" class="more-btn"><button class="second-btn">Read More</button></a>
-            </div>
-        </div>
-    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
 
-    <!-- 
-    <div class="container">
-        <div class="marquee-container">
-            <div class="overlay">
-                <a href="aboutS.html" class="read-more">Read More</a>
-            </div>
-            <div class="marquee">
-                <img src="images/s1.jpg">
-                <img src="images/parenting-bg.jpg">
-                <img src="images/s2.png">
-                <img src="images/s3.png">
-                <img src="images/s4.jpg">
-                <img src="images/s5.png">
-                <img src="images/s6.png">
-                <img src="images/s7.png">
-            </div>
-        </div>
-
-        <div class="marquee-container">
-            <div class="overlay">
-                <a href="aboutP.html" class="read-more">Read More</a>
-            </div>
-            <div class="marquee">
-                <img src="images/p1.jpg">
-                <img src="images/image.png">
-                <img src="images/p3.jpg">
-                <img src="images/p4.jpg">
-                <img src="images/p5.jpg">
-                <img src="images/p2.jpg">
-                <img src="images/p8.jpg">
-                <img src="images/p6.jpg">
-                <img src="images/p7.jpg">
-            </div>
-        </div> -->
-    </div>
-
-</body>
-
+        // Toggle the 'active' class on the sidebar when the hamburger button is clicked
+        hamburger.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
 </html>

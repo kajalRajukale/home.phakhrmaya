@@ -1,0 +1,96 @@
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+/* Header styling */
+
+.small-header {
+  display: flex;
+  justify-content: center; /* Adjusted for mobile */
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: 900;
+  background-color: #1d932d;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-nav-bar {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  border-bottom: 2px solid #ffcc00;
+}
+.add-nav-bar.active {
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Adjustments for the main-header */
+.main-header {
+  padding: 10px;
+}
+.icons img,
+.icons2 img {
+  width: 30px; /* Set the same width for all icons */
+  height: 30px; /* Set the same height for all icons */
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Ensure the transition is uniform */
+}
+
+.icons img:hover,
+.icons2 img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.icons2 {
+  display: flex;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .small-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .nav-1 {
+    display: none; /* Hide nav items by default */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-1.active {
+    display: flex; /* Show active item */
+  }
+
+  .nav-1.show {
+    display: flex; /* Show all items when menu is active */
+    flex-direction: column; /* Stack items */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle */
+  }
+}
+
+/* Existing styles remain unchanged */
