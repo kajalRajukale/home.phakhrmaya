@@ -4,8 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Page</title>
-    <link rel="stylesheet" href="/lib/css/global.css" />
-    <link rel="stylesheet" href="/lib/css/donate_add_page.css" />
+    <style>
+      /* donate_add_page.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header Section */
+header {
+  background-color: #2eaf4d;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-1 {
+  margin: 10px;
+}
+
+.add-nav-bar {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-nav-bar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.add-nav-bar.active {
+  background-color: #ffeb3b;
+  color: #2eaf4d;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* Main Donation Section */
+.main-third {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.child-third {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.one-box, .two-box, .third-box {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* QR Code */
+.donate-ic {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 12px;
+  background-color: #2eaf4d;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #258e3f;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-1 {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .nav-1.show {
+    display: block;
+  }
+
+  .small-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="/lib/css/global.css" />
+    <link rel="stylesheet" href="/lib/css/donate_add_page.css" /> -->
   </head>
   <header>
     <div class="main-header">

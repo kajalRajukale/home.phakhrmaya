@@ -1,102 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donate</title>
-  <link rel="stylesheet" href="../lib/css/donate.css" />
-  <link rel="stylesheet" href="../lib/css/popup.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate | RHPM Sanstha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body>
-  <header>
-    <div class="main-header">
-      <div class="small-header">
-        <div class="menu-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: start; gap: 10px;">
-          <img src="../images/icons/logo.png" alt="Logo" style="width: 8%" />
-          <div>
-            <h1 style="font-size: 23px; color: #fff">Radhabai Hardikar Pranijat Mangal Sanstha</h1>
-          </div>
-        </div>
-
-        <div class="nav-1"><a href="../index.html" class="add-nav-bar">Home</a></div>
-        <div class="nav-1"><a href="../donation/donate.html" class="add-nav-bar active">Donate</a></div>
-        <div class="nav-1"><a href="../contact.html" class="add-nav-bar">Contact</a></div>
-        <div class="nav-1"><a href="../trustees.html" class="add-nav-bar">Trustees</a></div>
-        <div class="nav-1"><a href="../gallery.html" class="add-nav-bar">Gallery</a></div>
-        <div class="nav-1"><a href="../awards.html" class="add-nav-bar">Awards</a></div>
-
-
-      </div>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-green-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Radhabai Hardikar Pranjjat Mangal Sanstha</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline font-bold">Donate</a>
+        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline">Gallery</a>
+        <a href="#" class="hover:underline">Awards</a>
+      </nav>
     </div>
   </header>
 
-  <div class="main">
-    <div class="child">
-      <div class="one-section">
-        <h1 class="donate-h1">Empower a Child’s Future</h1>
-        <h4>Donate Today and Be the Change!</h4>
-        <div class="donate-para">
-          <p class="para-donate">
-            By donating just <b style="font-weight: 900">₹10,000,</b> you can
-            Sponsor <b style="font-weight: 900">one child’s Education</b>.
-          </p>
-          <p class="para-donate">
-            You can
-            <b style="font-weight: 900">Sponsor a child</b> (residential) by
-            donating RS.<b style="font-weight: 900"> 30,000/-</b> per year.
-          </p>
-        </div>
-
-        <!--
-        <div class="div-donate-btn">
-          <a href="donateNow.html" class="donate">Donate Now</a>
-        </div>
-        -->
-        <button id="openModalBtn">Donate</button>
-
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <iframe src="donation/index.php" width="100%" height="500px" frameborder="0"></iframe>
-          </div>
-        </div>
-
-        <script src="/lib/js/popup-script.js"></script>
+  <main class="container mx-auto py-12 px-6">
+    <section class="bg-white rounded-2xl shadow-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4 text-green-700">Empower a Child's Future</h2>
+        <p class="mb-2 font-semibold">Be a Hero. Be the Change!</p>
+        <p class="mb-4">With just <span class="text-blue-600 font-bold">₹10,000</span>, you can sponsor <span class="font-semibold text-indigo-600">one child’s education</span>.</p>
+        <p class="mb-6">Want to go further? Sponsor a child (residential) by donating <span class="font-bold text-pink-600">₹30,000/year</span>.</p>
+        <a href="#" class="bg-green-600 text-white px-5 py-3 rounded-xl hover:bg-green-700 transition">Donate Now</a>
       </div>
-
-      <div class="two-section">
-        <div class="div-img-donate">
-          <img class="donat-img" src="../images/donate.jpg" />
-        </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGIq7qU7sFvEUaB-UMrpMNL6e1SFgxmrK8Q&s" alt="Child Education" class="rounded-2xl shadow-md" style="height: 258px;
+    width: 373px;"/>
       </div>
-    </div>
+    </section>
 
-    <div class="child">
-      <div class="one-section">
-        <h1>
-          RadhaBai Hardikar Pranijat Magel Sanstha is a 80G,FCRA registered NGO
-        </h1>
-      </div>
-    </div>
-  </div>
+    <section class="mt-12 text-center">
+      <p class="text-xl font-semibold">We are a <span class="text-green-600">80G & FCRA registered</span> NGO</p>
+    </section>
+  </main>
 
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navItems = document.querySelectorAll(".nav-1");
-
-    menuToggle.addEventListener("click", () => {
-      navItems.forEach((item) => {
-        item.classList.toggle("show");
-      });
-    });
-  </script>
+  <footer class="bg-gray-200 py-4 text-center text-sm">
+    © 2025 Radhabai Hardikar Pranjjat Mangal Sanstha. All rights reserved.
+  </footer>
 </body>
-
 </html>
