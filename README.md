@@ -6,4 +6,4 @@ Steps to update wnd work with repository
 2. Do Changes local
 3. COMMIT
 4. SYNC
-   
+   my name is kajal
