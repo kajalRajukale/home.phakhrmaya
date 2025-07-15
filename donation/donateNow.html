@@ -207,9 +207,9 @@ margin-left: 34px;"/>
         <b>IFSC Code:</b><p>VSBL 0000004</p>
       </div>
       <div class="third-box">
-        <form id="donationForm" onsubmit="submitForm(event)">
-          <label for="name">Full Name of Donor:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <form id="donationForm"  action="process-donation.php" method="post">
+          <label for="fullname">Full Name of Donor:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your Name" required />
           <label for="address">Address:</label>
           <input type="text" id="address" name="address" placeholder="Your Address" required />
           <label for="phone">Phone Number:</label>
@@ -219,16 +219,16 @@ margin-left: 34px;"/>
           <label for="birthdate">Birthdate:</label>
           <input type="date" id="birthdate" name="birthdate" required />
           <label for="email">Email id:</label>
-          <input type="email" id="email" name="email" placeholder="Enter Email" required />
-          <label for="payment-method">Please transfer this data to:</label>
-          <select id="payment-method" name="payment-method" required>
+          <!-- <input type="email" id="email" name="email" placeholder="Enter Email" required /> -->
+          <!-- <label for="payment-method">Please transfer this data to:</label> -->
+          <!-- <select id="payment-method" name="payment-method" required>
             <option value="whatsapp">WhatsApp: 9579085270</option>
             <option value="email">Email: balwansumati@gmail.com</option>
-          </select>
+          </select> -->
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </div>      
   </div>
 
   <script>
@@ -238,9 +238,31 @@ margin-left: 34px;"/>
 
     function submitForm(event) {
       event.preventDefault();
-      alert("Thank you for submitting your donation info!");
-      // Add form processing logic here
+      const form = document.getElementById('donationForm');
+      const formData = new FormData(form);
+
+      // First we call the backend php script to save the data in the database
+      // We pass the form data to the script with the variable @formData
+      fetch('process-donation.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => {
+          // If the response is ok, we alert the user and reset the form
+          if (response.ok) {
+            alert("Thank you for submitting your donation info!");
+            form.reset();
+          } else {
+            alert("There was an error submitting your donation. Please try again.");
+          }
+      })
+      .catch(() => {
+          alert("There was an error submitting your donation. Please try again.");
+      });
     }
+
+    // When we submit the Form, the function @submitForm will be called
+    // document.getElementById('donationForm').addEventListener('submit', submitForm);
   </script>
 </body>
 </html>

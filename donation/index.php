@@ -51,7 +51,7 @@
 
 
     <div class="donation-box">
-        <form action="process_donation.php" method="post">
+        <form action="/donation/process-donation.php" method="post">
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
