@@ -20,7 +20,7 @@ $phone = isset($_POST['phone']) ? $_POST['phone'] : '0000000000';
 $pan = isset($_POST['pan']) ? $_POST['pan'] : 'DEFAULTPAN';
 $birthdate = isset($_POST['birthdate']) ? $_POST['birthdate'] : '2000-01-01';
 $email = isset($_POST['email']) ? $_POST['email'] : 'default@example.com';
-$transfer = isset($_POST['transfer_method']) ? $_POST['transfer_method'] : 'Cash';
+$paymentScreenshot = isset($_POST['paymentScreenshot']) ? $_POST['paymentScreenshot'] : '';
 
 // Check is table exists, if not create it
 $sql = "CREATE TABLE IF NOT EXISTS donationTb (
@@ -31,8 +31,8 @@ $sql = "CREATE TABLE IF NOT EXISTS donationTb (
     pan_number TEXT NOT NULL,
     birthdate DATE NOT NULL,
     email_id TEXT NOT NULL,
-    transfer_method TEXT NOT NULL
-)";
+    payment_Screenshot BLOB
+    )";
 
 // Check if table exists
 $tableExists = $conn->query("SELECT name FROM sqlite_master WHERE type='table' AND name='donationTb'")->fetch();
@@ -50,8 +50,8 @@ if (!$tableExists) {
 
 // Insert query
 $sql = "INSERT INTO donationTb 
-        (full_name, address, phone_number, pan_number, birthdate, email_id, transfer_method) 
-        VALUES (:fullname, :address, :phone, :pan, :birthdate, :email, :transfer)";
+        (full_name, address, phone_number, pan_number, birthdate, email_id, payment_Screenshot) 
+        VALUES (:fullname, :address, :phone, :pan, :birthdate, :email, :paymentScreenshot)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(':fullname', $fullname);
@@ -60,7 +60,7 @@ $stmt->bindParam(':phone', $phone);
 $stmt->bindParam(':pan', $pan);
 $stmt->bindParam(':birthdate', $birthdate);
 $stmt->bindParam(':email', $email);
-$stmt->bindParam(':transfer', $transfer);
+$stmt->bindParam(':paymentScreenshot', $paymentScreenshot);
 
 if ($stmt->execute()) {
     echo "Donor data submitted successfully!";
