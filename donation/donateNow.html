@@ -241,12 +241,13 @@
         </div>
         <div class="third-box">
           <h2 style="color: orangered; font-size: 25px">Donation Form</h2>
-          <form
+            <form
             id="donationForm"
             action="process-donation.php"
             method="post"
             enctype="multipart/form-data"
-          >
+            onsubmit="submitForm(event)"
+            >
             <label for="fullname">Full Name of Donor:</label>
             <input
               type="text"
@@ -323,24 +324,27 @@
         const form = document.getElementById("donationForm");
         const formData = new FormData(form);
 
-        // First we call the backend php script to save the data in the database
-        // We pass the form data to the script with the variable @formData
+        console.log("Submitting form data:", formData);
+
         fetch("process-donation.php", {
           method: "POST",
           body: formData,
         })
           .then((response) => {
-            // If the response is ok, we alert the user and reset the form
             if (response.ok) {
-              alert("Thank you for submitting your donation info!");
+              console.log("Form submitted successfully!");
+              window.location.href = "donation-thank-you.html";
               form.reset();
             } else {
+              console.error("Error submitting form:", response.statusText);
+              window.location.href = "donation-error.html";
               alert(
                 "There was an error submitting your donation. Please try again."
               );
             }
           })
           .catch(() => {
+            console.error("Network error or server not reachable.");
             alert(
               "There was an error submitting your donation. Please try again."
             );

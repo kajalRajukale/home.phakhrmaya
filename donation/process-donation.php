@@ -22,16 +22,7 @@ if (isset($_FILES['paymentScreenshot']) && $_FILES['paymentScreenshot']['error']
     $paymentScreenshot = file_get_contents($_FILES['paymentScreenshot']['tmp_name']);
 }
 
-echo "Received data: <br>";
-echo "Full Name: $fullname <br>";   
-echo "Address: $address <br>";
-echo "Phone: $phone <br>";
-echo "PAN: $pan <br>";
-echo "Birthdate: $birthdate <br>";
-echo "Email: $email <br>";
-echo "Donation Amount: $donationAmount <br>";
-echo "Donation Date: $donationDate <br>";
-echo "Payment Screenshot: " . (!empty($paymentScreenshot) ? 'Received' : 'Not provided') . "<br>";
+
 
 // Check is table exists, if not create it
 $sql = "CREATE TABLE IF NOT EXISTS " . $tableName . " (
@@ -80,8 +71,8 @@ $stmt->bindParam(':donationAmount', $donationAmount);
 $stmt->bindParam(':donationDate', $donationDate);
 
 if ($stmt->execute()) {
-    echo "Donor data submitted successfully!";
+    error_log("Donor data submitted successfully!");
 } else {
-    echo "Error submitting donor data.";
+    error_log("Error submitting donor data: " . implode(", ", $stmt->errorInfo()));
 }
 ?>
