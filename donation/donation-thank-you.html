@@ -5,37 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donate | RHPM Sanstha</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Confetti animation styles */
+    .confetti {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 50;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: confetti-fall 2.5s linear forwards;
+    }
+    @keyframes confetti-fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.5;
+      }
+    }
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    /* Emoji bounce */
+    .bounce {
+      animation: bounce 1.2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-18px);}
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Confetti container -->
+  <div class="confetti" id="confetti"></div>
   <header class="bg-green-600 text-white p-4 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-xl font-bold">Radhabai Hardikar Pranjjat Mangal Sanstha</h1>
       <nav class="space-x-4">
-        <a href="C:\Coding4Beginner\Websites\home.phakhrmaya\donation\donate.html" class="hover:underline">Home</a>
-        <a href="C:\Coding4Beginner\Websites\home.phakhrmaya\donation\donate.html" class="hover:underline font-bold">Donate</a>
-        <a href="C:\Coding4Beginner\Websites\home.phakhrmaya\donation\contact.html" class="hover:underline">Contact</a>
-        <a href="C:\Coding4Beginner\Websites\home.phakhrmaya\donation\gallery.html" class="hover:underline">Gallery</a>
-        <a href="C:\Coding4Beginner\Websites\home.phakhrmaya\donation\awards.html" class="hover:underline">Awards</a>
+        <a href="donate.html" class="hover:underline">Home</a>
+        <a href="donate.html" class="hover:underline font-bold">Donate</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="awards.html" class="hover:underline">Awards</a>
       </nav>
     </div>
   </header>
 
   <main class="container mx-auto py-12 px-6">
-
-        <section class="bg-white rounded-2xl shadow-lg p-8 grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-4 text-green-700">Thank You for Your Generous Donation!</h2>
-                <p class="mb-2 font-semibold">Your kindness brings hope and opportunity.</p>
-                <p class="mb-4">With heartfelt gratitude, we bless you for supporting <span class="font-semibold text-indigo-600">a child's education</span> and future.</p>
-                <p class="mb-6">Your contribution makes a lasting difference. May you and your loved ones be blessed abundantly!</p>
-                <a href="donate.html" class="bg-green-600 text-white px-5 py-3 rounded-xl hover:bg-green-700 transition">Donate Again</a>
-            </div>
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGIq7qU7sFvEUaB-UMrpMNL6e1SFgxmrK8Q&s" alt="Child Education" class="rounded-2xl shadow-md" style="height: 258px; width: 373px;"/>
-            </div>
-        </section>
+    <section class="bg-white rounded-2xl shadow-lg p-8 grid md:grid-cols-2 gap-10 items-center fade-in">
+      <div>
+        <div class="flex items-center mb-4">
+          <span class="text-5xl mr-3 bounce">😊</span>
+          <h2 class="text-3xl font-bold text-green-700">Thank You for Your Generous Donation!</h2>
+        </div>
+        <p class="mb-2 font-semibold text-lg fade-in" style="animation-delay:0.5s;">Your kindness brings hope and opportunity.</p>
+        <p class="mb-4 fade-in" style="animation-delay:0.8s;">With heartfelt gratitude, we bless you for supporting <span class="font-semibold text-indigo-600">a child's education</span> and future.</p>
+        <p class="mb-6 fade-in" style="animation-delay:1.1s;">Your contribution makes a lasting difference. May you and your loved ones be blessed abundantly!</p>
+        <a href="donate.html" class="bg-green-600 text-white px-5 py-3 rounded-xl hover:bg-green-700 transition fade-in" style="animation-delay:1.4s;">Donate Again</a>
+      </div>
+      <div class="fade-in" style="animation-delay:1.2s;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGIq7qU7sFvEUaB-UMrpMNL6e1SFgxmrK8Q&s" alt="Child Education" class="rounded-2xl shadow-md" style="height: 258px; width: 373px;"/>
+      </div>
+    </section>
+    <div class="text-center mt-8 fade-in" style="animation-delay:1.6s;">
+      <span class="text-2xl font-semibold text-green-600">🎉 You made a child smile today! 🎉</span>
+    </div>
+  </main>
   <footer class="bg-gray-200 py-4 text-center text-sm">
     © 2025 Radhabai Hardikar Pranjjat Mangal Sanstha. All rights reserved.
   </footer>
+  <script>
+    // Confetti generator
+    function randomColor() {
+      const colors = ['#34d399','#fbbf24','#f472b6','#60a5fa','#a78bfa','#f87171'];
+      return colors[Math.floor(Math.random()*colors.length)];
+    }
+    function createConfettiPiece() {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.left = Math.random()*100 + 'vw';
+      piece.style.background = randomColor();
+      piece.style.animationDuration = (1.5 + Math.random()) + 's';
+      document.getElementById('confetti').appendChild(piece);
+      setTimeout(() => piece.remove(), 2500);
+    }
+    // Launch confetti
+    for(let i=0;i<40;i++) {
+      setTimeout(createConfettiPiece, i*60);
+    }
+  </script>
 </body>
 </html>
