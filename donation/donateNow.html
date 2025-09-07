@@ -1,358 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate Page</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f7f7f7;
-        color: #333;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
 
-      /* Header */
-      header {
-        background-color: #2eaf4d;
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+    /* Header */
+    header {
+      background-color: #2eaf4d;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-      .main-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        flex-wrap: wrap;
-      }
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
 
-      .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-      .logo-container img {
-        width: 40px;
-      }
+    .logo-container img {
+      width: 40px;
+    }
 
-      .logo-container h1 {
-        font-size: 18px;
-        margin: 0;
-      }
+    .logo-container h1 {
+      font-size: 18px;
+      margin: 0;
+    }
 
+    nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link.active {
+      background-color: #ffeb3b;
+      color: #2eaf4d;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 3px;
+    }
+
+    /* Donation Section */
+    .main-third {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .child-third {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .one-box,
+    .two-box,
+    .third-box {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .scanner-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      /* justify-content: center; */
+      margin: 15px 0;
+    }
+
+    .scanner-box {
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fafafa;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .scanner-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .donate-ic {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    form input,
+    form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form button {
+      padding: 12px;
+      background-color: #2eaf4d;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #258e3f;
+    }
+
+    /* Modal */
+    #qrModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    #qrModal img {
+      max-width: 80%;
+      max-height: 80%;
+      border: 5px solid white;
+      border-radius: 10px;
+    }
+
+    #qrModal span {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* Responsive Nav */
+    @media (max-width: 768px) {
       nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+      }
+
+      nav.show {
         display: flex;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .nav-link {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-
-      .nav-link:hover {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      .nav-link.active {
-        background-color: #ffeb3b;
-        color: #2eaf4d;
+        background-color: #2eaf4d;
+        padding: 10px 0;
       }
 
       .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-      }
-
-      .bar {
-        height: 3px;
-        width: 25px;
-        background-color: white;
-        margin: 4px 0;
-        border-radius: 3px;
-      }
-
-      /* Donation Section */
-      .main-third {
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .child-third {
         display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
       }
+    }
+  </style>
+</head>
 
-      .one-box,
-      .two-box,
-      .third-box {
-        flex: 1;
-        min-width: 280px;
-      }
-
-      .donate-ic {
-        
-        max-width: 250px;
-        /* border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        margin: 0 auto;
-        display: block; */
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      form label {
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-
-      form input,
-      form select {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 16px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      form button {
-        padding: 12px;
-        background-color: #2eaf4d;
-        color: white;
-        border: none;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      form button:hover {
-        background-color: #258e3f;
-      }
-
-      /* Responsive Nav */
-      @media (max-width: 768px) {
-        nav {
-          flex-direction: column;
-          width: 100%;
-          display: none;
-        }
-
-        nav.show {
-          display: flex;
-          background-color: #2eaf4d;
-          padding: 10px 0;
-        }
-
-        .menu-toggle {
-          display: flex;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="main-header">
-        <div class="logo-container">
-          <img src="../images/icons/logo.png" alt="Logo" />
-          <h1>Radhabai Hardikar Pranijat Mangal Sanstha</h1>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <nav id="navbar">
-          <a href="donate.html" class="nav-link">Home</a>
-          <a href="donate.html" class="nav-link active">Donate</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="trustees.html" class="nav-link">Trustees</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-        </nav>
+<body>
+  <header>
+    <div class="main-header">
+      <div class="logo-container">
+        <img src="../images/icons/logo.png" alt="Logo" />
+        <h1>Radhabai Hardikar Pranijat Mangal Sanstha</h1>
       </div>
-    </header>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav id="navbar">
+        <a href="donate.html" class="nav-link">Home</a>
+        <a href="donate.html" class="nav-link active">Donate</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="trustees.html" class="nav-link">Trustees</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="main-third">
-      <div class="child-third">
-        <div class="one-box">
-          <h1 style="color: orangered; font-size: 25px">
-            Donation Information
-          </h1>
+  <div class="main-third">
+    <div class="child-third">
+      <!-- Donation Info -->
+      <div class="one-box">
+        <h1 style="color: orangered; font-size: 25px">Donation Information</h1>
+        <p>
           We will explain that the donation is used for the welfare of our kids,
           and we want to use the complete donation for the kids.
-          <br />
-          <br />
+        </p>
+        <p>
           We do not want to pay any extra fees to the payment gateway, which is
           why we are not using any payment gateway for this donation.
-          <br />
-          <br />So we will not use a payment gateway, and we will not charge any
-          extra fees for the donation. <br />
-          <br />
+        </p>
+        <p>
+          So we will not use a payment gateway, and we will not charge any extra
+          fees for the donation.
+        </p>
+        <p>
           By this, we kindly ask you to transfer the donation amount to our bank
           account, and then upload the screenshot of the payment here.
-        </div>
+        </p>
+      </div>
 
-        <div class="two-box">
-          <h1 style="color: orangered; font-size: 25px">Donate Now</h1>
+      <!-- Donation QR + Bank -->
+      <div class="two-box">
+        <h1 style="color: orangered; font-size: 25px">Donate Now</h1>
 
-          <div class="one-box">
-            <img
-              class="donate-ic"
-              src="../images/scanner-Qr.png"
-              alt="QR Code for Donation"
-              
-            />
+        <div class="scanner-container">
+          <!-- Scanner 1 -->
+          <div class="scanner-box" onclick="openModal('../images/scanner-Qr.png')">
+            <img class="donate-ic" src="../images/scanner-Qr.png" alt="QR Code 1" />
+            <p><b>Scanner 1</b><br>Vishweshwar Sahakari Bank</p>
           </div>
-          <h2 style="color: orangered; font-size: 25px">Bank Details</h2>
-          <b>Account holder name:</b>
-          <p>Radhabai Hardikar Pranijat Mangal Sanstha</p>
-          <b>Bank Name:</b>
-          <p>Vishweshwar Sahakari Bank Ltd., Pune</p>
-          <b>Bank Address:</b>
-          <p>Dhankwadi Branch</p>
-          <b>Account Type:</b>
-          <p>Saving</p>
-          <b>Account Number:</b>
-          <p>004128 100009949</p>
-          <b>IFSC Code:</b>
-          <p>VSBL 0000004</p>
+      
         </div>
-        <div class="third-box">
-          <h2 style="color: orangered; font-size: 25px">Donation Form</h2>
-            <form
-            id="donationForm"
-            action="process-donation.php"
-            method="post"
-            enctype="multipart/form-data"
-            onsubmit="submitForm(event)"
-            >
-            <label for="fullname">Full Name of Donor:</label>
-            <input
-              type="text"
-              id="fullname"
-              name="fullname"
-              placeholder="Your Name"
-              required
-            />
-            <label for="address">Address:</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Your Address"
-              required
-            />
-            <label for="phone">Phone Number:</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Enter Phone Number"
-              required
-            />
-            <label for="pan">PAN Number:</label>
-            <input
-              type="text"
-              id="pan"
-              name="pan"
-              placeholder="Enter PAN Number"
-              required
-            />
-            <label for="birthdate">Birthdate:</label>
-            <input type="date" id="birthdate" name="birthdate" required />
-            <label for="email">Email id:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter Email"
-              required
-            />
-            <label for="paymentScreenshot">Upload Payment Screenshot:</label>
-            <input
-              type="file"
-              id="paymentScreenshot"
-              name="paymentScreenshot"
-              accept="image/*"
-              required
-            />
 
-            <label for="donationAmount">Donation Amount:</label>
-            <input
-              type="number"
-              id="donationAmount"
-              name="donationAmount"
-              placeholder="Enter Amount in ₹"
-              required
-            />
+        <h2 style="color: orangered; font-size: 25px">Bank Details</h2>
+        <b>Account holder name:</b>
+        <p>Radhabai Hardikar Pranijat Mangal Sanstha</p>
+        <b>Bank Name:</b>
+        <p>Vishweshwar Sahakari Bank Ltd., Pune</p>
+        <b>Bank Address:</b>
+        <p>Dhankwadi Branch</p>
+        <b>Account Type:</b>
+        <p>Saving</p>
+        <b>Account Number:</b>
+        <p>004128 100009949</p>
+        <b>IFSC Code:</b>
+        <p>VSBL 0000004</p>
+      </div>
 
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+      <!-- Donation Form -->
+      <div class="third-box">
+        <h2 style="color: orangered; font-size: 25px">Donation Form</h2>
+        <form id="donationForm" action="process-donation.php" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
+          <label for="fullname">Full Name of Donor:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your Name" required />
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" placeholder="Your Address" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required />
+
+          <label for="pan">PAN Number:</label>
+          <input type="text" id="pan" name="pan" placeholder="Enter PAN Number" required />
+
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+
+          <label for="email">Email id:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Email" required />
+
+          <label for="paymentScreenshot">Upload Payment Screenshot:</label>
+          <input type="file" id="paymentScreenshot" name="paymentScreenshot" accept="image/*" required />
+
+          <label for="donationAmount">Donation Amount:</label>
+          <input type="number" id="donationAmount" name="donationAmount" placeholder="Enter Amount in ₹" required />
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
+  </div>
 
-    <script>
-      function toggleMenu() {
-        document.getElementById("navbar").classList.toggle("show");
-      }
+  <!-- Modal -->
+  <div id="qrModal">
+    <span onclick="closeModal()">&times;</span>
+    <img id="qrImage" src="" alt="QR Code" />
+  </div>
 
-      function submitForm(event) {
-        event.preventDefault();
-        const form = document.getElementById("donationForm");
-        const formData = new FormData(form);
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("show");
+    }
 
-        console.log("Submitting form data:", formData);
+    function submitForm(event) {
+      event.preventDefault();
+      const form = document.getElementById("donationForm");
+      const formData = new FormData(form);
 
-        fetch("process-donation.php", {
-          method: "POST",
-          body: formData,
+      fetch("process-donation.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "donation-thank-you.html";
+            form.reset();
+          } else {
+            window.location.href = "donation-error.html";
+            alert("There was an error submitting your donation. Please try again.");
+          }
         })
-          .then((response) => {
-            if (response.ok) {
-              console.log("Form submitted successfully!");
-              window.location.href = "donation-thank-you.html";
-              form.reset();
-            } else {
-              console.error("Error submitting form:", response.statusText);
-              window.location.href = "donation-error.html";
-              alert(
-                "There was an error submitting your donation. Please try again."
-              );
-            }
-          })
-          .catch(() => {
-            console.error("Network error or server not reachable.");
-            alert(
-              "There was an error submitting your donation. Please try again."
-            );
-          });
-      }
+        .catch(() => {
+          alert("There was an error submitting your donation. Please try again.");
+        });
+    }
 
-      // When we submit the Form, the function @submitForm will be called
-      // document.getElementById('donationForm').addEventListener('submit', submitForm);
-    </script>
-  </body>
+    function openModal(imageSrc) {
+      document.getElementById("qrModal").style.display = "flex";
+      document.getElementById("qrImage").src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("qrModal").style.display = "none";
+    }
+  </script>
+</body>
 </html>

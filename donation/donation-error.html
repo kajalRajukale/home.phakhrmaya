@@ -1,1 +1,60 @@
-thank you
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Donation Error | RHPM Sanstha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .shake {
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0);}
+            25% { transform: translateX(-8px);}
+            50% { transform: translateX(8px);}
+            75% { transform: translateX(-8px);}
+            100% { transform: translateX(0);}
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-red-50 text-gray-800">
+    <header class="bg-red-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Radhabai Hardikar Pranjjat Mangal Sanstha</h1>
+            <nav class="space-x-4">
+                <a href="donate.html" class="hover:underline">Home</a>
+                <a href="donate.html" class="hover:underline font-bold">Donate</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+                <a href="gallery.html" class="hover:underline">Gallery</a>
+                <a href="awards.html" class="hover:underline">Awards</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto py-12 px-6">
+        <section class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center fade-in">
+            <span class="text-6xl mb-4 shake">😔</span>
+            <h2 class="text-3xl font-bold text-red-700 mb-2">Oops! Something Went Wrong</h2>
+            <p class="mb-4 text-lg">We couldn't process your donation due to a technical issue or incomplete information.</p>
+            <p class="mb-6">Please try again or contact us if the problem persists. Your support means a lot!</p>
+            <div class="flex gap-4">
+                <a href="donate.html" class="bg-red-600 text-white px-5 py-3 rounded-xl hover:bg-red-700 transition">Try Again</a>
+                <a href="contact.html" class="bg-gray-200 text-red-700 px-5 py-3 rounded-xl hover:bg-gray-300 transition">Contact Support</a>
+            </div>
+        </section>
+        <div class="text-center mt-8 fade-in" style="animation-delay:0.8s;">
+            <span class="text-xl font-semibold text-red-600">We appreciate your kindness and patience!</span>
+        </div>
+    </main>
+    <footer class="bg-gray-200 py-4 text-center text-sm">
+        © 2025 Radhabai Hardikar Pranjjat Mangal Sanstha. All rights reserved.
+    </footer>
+</body>
+</html>
