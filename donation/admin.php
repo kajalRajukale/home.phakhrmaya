@@ -37,7 +37,7 @@ $donations = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <form method="post" action="logout.php">
             <button type="submit">Logout</button>
         </form>
-
+                
         <h2 class="mb-4">All Donations</h2>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
