@@ -57,7 +57,7 @@ php -S localhost:8000 -t .
 
 - **Donate:** `donation/donate.html` → `donation/donateNow.html`
 - **Processing:** `donation/process-donation.php` (handles form, uploads screenshot as BLOB)
-- **Admin List:** `donation/list-donations.php` (password protected)
+- **Admin List:** `` (password protected)
 - **Thank You/Error:** `donation/donation-thank-you.html`, `donation/donation-error.html`
 
 ### User API
